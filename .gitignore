@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.ruff_cache/
+data/derived/
+data/raw/*/pm_trades/

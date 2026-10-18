@@ -1,0 +1,18 @@
+{
+  "amendments": [
+    {
+      "id": "A1",
+      "made": "2026-10-04, after the first run on NBA data only (before any NHL/NFL/MLB demand data existed)",
+      "trigger": "One NBA title-clinch event: the market resolved to 99.95%, so the odds-move size and odds level were far outside anything in training; the regression extrapolated to an absurd order and wiped out M3's result (-69% of opportunity, almost entirely from that one event).",
+      "change": "(a) M3's odds features are clipped to the range seen in training (no extrapolation); (b) when the market has resolved (odds after the move >98% or <2%) M3 uses the class-only forecast, because a resolved market carries no magnitude information.",
+      "not_changed": "event set, windows, demand proxy, economics, M0-M2, metrics, inference. Both the original-spec and amended results are reported."
+    },
+    {
+      "id": "A2",
+      "made": "2026-10-04, during data QA of the NHL pipeline, before any NHL/NFL/MLB three-merchant result was computed",
+      "trigger": "Clear game-driven moves were labelled 'off-court news' because the rule required the move to START during the game; in thinner markets (NHL) odds drift a little before puck drop and finish repricing hours after the final horn.",
+      "change": "Signal classification (an input to M1-M3): a game explains a move if >=50% of the move happened inside [tip - 1h, tip + game length + 3h], using only prices up to the emission hour and only games that had finished before emission.",
+      "not_changed": "detection thresholds, denoising gates, the scenario engine and its metrics."
+    }
+  ]
+}

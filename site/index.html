@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tipoff · Phase 1 v2</title>
+    <meta
+      name="description"
+      content="Phase-1 validation: do prediction-market moves lead commerce? NBA × Shopify backtest."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%232a78d6'/%3E%3Cpath d='M6 20 L13 13 L18 17 L26 9' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <header class="top">
+      <div class="top-inner">
+        <div class="brand">
+          <span class="name">Tipoff</span>
+          <span class="tag"
+            >Phase 1 · v2 · does a quantified prediction-market signal make merchants money? · NBA · NHL · NFL ·
+            MLB</span
+          >
+          <span class="spacer"></span>
+          <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle theme">Theme</button>
+        </div>
+        <nav class="tabs" id="tabs">
+          <a href="#answer" data-view="answer">The answer</a>
+          <a href="#replay" data-view="replay">Event replay</a>
+          <a href="#events" data-view="events">All events</a>
+          <a href="#leagues" data-view="leagues">Leagues</a>
+          <a href="#method" data-view="method">Method &amp; integrity</a>
+          <a href="#strategy" data-view="strategy">Strategy</a>
+          <a href="deck.html">Deck</a>
+          <span class="nav-sep">from v1</span>
+          <a href="#backtest" data-view="backtest" class="v1">Backtester</a>
+          <a href="#denoise" data-view="denoise" class="v1">Denoising</a>
+          <a href="#evidence" data-view="evidence" class="v1">Signal evidence</a>
+          <a href="#cases" data-view="cases" class="v1">Case studies</a>
+          <a href="#merchant" data-view="merchant" class="v1">Latency sim</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="view" id="view-answer"></section>
+      <section class="view" id="view-replay"></section>
+      <section class="view" id="view-events"></section>
+      <section class="view" id="view-leagues"></section>
+      <section class="view" id="view-method"></section>
+      <section class="view" id="view-strategy"></section>
+      <section class="view" id="view-backtest"></section>
+      <section class="view" id="view-denoise"></section>
+      <section class="view" id="view-evidence"></section>
+      <section class="view" id="view-cases"></section>
+      <section class="view" id="view-merchant"></section>
+      <p class="footer-note" id="footer"></p>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

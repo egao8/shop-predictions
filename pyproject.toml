@@ -1,0 +1,10 @@
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["E501", "B007", "B023", "B905"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["common", "detect", "evaluate", "leagues", "merchant", "scenarios"]

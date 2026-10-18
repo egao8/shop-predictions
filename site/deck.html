@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tipoff · State of the model</title><style>
+:root { --ink:#0b0b0b; --ink2:#52514e; --mute:#898781; --line:#e1e0d9; --bg:#f9f9f7; --card:#fcfcfb; --blue:#2a78d6; --wash:rgba(42,120,214,.08);
+        --good:#0ca30c; --warn:#fab219; --bad:#d03b3b; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #e9e8e3; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); }
+.deck { display: flex; flex-direction: column; align-items: center; gap: 28px; padding: 28px 0 80px; }
+.slide { width: 1280px; height: 720px; background: var(--bg); position: relative; padding: 56px 72px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,.08);
+         display: flex; flex-direction: column; transform-origin: top center; }
+.kicker { font-size: 15px; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 10px; }
+h1 { font-size: 64px; margin: 0 0 18px; letter-spacing: -.02em; }
+h2 { font-size: 34px; line-height: 1.2; margin: 0 0 26px; letter-spacing: -.01em; max-width: 1120px; }
+p { font-size: 20px; line-height: 1.45; margin: 0 0 14px; color: var(--ink); }
+.small { font-size: 15px; color: var(--ink2); line-height: 1.45; }
+.sub { font-size: 26px; color: var(--ink2); }
+.title { justify-content: center; }
+.foot { position: absolute; left: 72px; right: 72px; bottom: 34px; font-size: 14px; color: var(--mute); }
+.slide::after { content: attr(data-n); position: absolute; right: 36px; bottom: 30px; font-size: 13px; color: var(--mute); }
+.ans { display: inline-block; font-size: 20px; padding: 4px 14px; border-radius: 999px; vertical-align: middle; margin-left: 10px; border: 1px solid var(--line); background: var(--card); font-weight: 650; }
+.ans::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; vertical-align: 1px; background: var(--c); }
+.ans.good { --c: var(--good); } .ans.warn { --c: var(--warn); } .ans.bad { --c: var(--bad); }
+.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 10px; }
+.big { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px; }
+.big .num { font-size: 52px; font-weight: 750; letter-spacing: -.02em; margin: 10px 0 8px; }
+.big .lab { font-size: 19px; line-height: 1.4; }
+.big .lab span { color: var(--ink2); font-size: 16px; }
+.tag, .pill { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 650; padding: 3px 12px; border-radius: 999px; border: 1px solid var(--line); background: #fff; }
+.tag i, .pill i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+.good { --c: var(--good); } .warn { --c: var(--warn); } .bad { --c: var(--bad); }
+.steps { display: flex; flex-direction: column; gap: 12px; }
+.step { display: grid; grid-template-columns: 44px 1fr 150px; gap: 18px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 20px; }
+.step .n { width: 36px; height: 36px; border-radius: 50%; background: var(--wash); color: var(--blue); font-weight: 750; display: grid; place-items: center; font-size: 18px; }
+.step .what b { display: block; font-size: 21px; } .step .what span { font-size: 16px; color: var(--ink2); }
+.step .pill { justify-self: end; }
+.pipe { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 20px; }
+.pipe div { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 10px; min-height: 300px; }
+.pipe b { font-size: 21px; } .pipe span { font-size: 16px; color: var(--ink2); line-height: 1.45; flex: 1; } .pipe em { font-style: normal; font-weight: 700; color: var(--blue); font-size: 18px; }
+.two { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: start; }
+.callout { background: var(--wash); border-left: 4px solid var(--blue); border-radius: 0 12px 12px 0; padding: 20px 24px; }
+.callout b { font-size: 19px; display: block; margin-bottom: 8px; } .callout p, .callout li { font-size: 18px; }
+table.t { border-collapse: collapse; width: 100%; font-size: 18px; margin: 6px 0 16px; }
+table.t th { text-align: left; font-size: 14px; color: var(--ink2); font-weight: 600; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+table.t td { padding: 10px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+table.t tr.hl td { background: var(--wash); } table.t tr.dim td { color: var(--mute); }
+table.big3 td { font-size: 19px; padding: 14px 10px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.grid div { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+.grid b { display: block; font-size: 19px; margin-bottom: 8px; } .grid span { font-size: 16px; color: var(--ink2); line-height: 1.45; }
+ol.gaps, ul { margin: 0; padding-left: 24px; } ol.gaps li, ul li { font-size: 19px; line-height: 1.45; margin-bottom: 10px; } ol.gaps em { color: var(--bad); font-style: normal; font-weight: 650; }
+svg.bars .bl { font-size: 17px; fill: var(--ink); font-weight: 600; } svg.bars .bn { font-size: 13px; fill: var(--mute); }
+svg.bars .bv { font-size: 16px; fill: var(--ink); font-weight: 650; font-variant-numeric: tabular-nums; } svg.bars .zero { stroke: #c3c2b7; stroke-width: 1; }
+.nav { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 13px; color: var(--ink2); display: flex; gap: 12px; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+.nav a { color: var(--blue); text-decoration: none; font-weight: 600; }
+body.present .deck { padding: 0; gap: 0; } body.present .slide { display: none; box-shadow: none; position: fixed; top: 50%; left: 50%; }
+body.present .slide.on { display: flex; }
+@media print { html, body { background: none; } .deck { padding: 0; gap: 0; display: block; }
+  .slide { box-shadow: none; page-break-after: always; break-after: page; transform: none !important; margin: 0 !important; position: relative !important; top: auto !important; left: auto !important; display: flex !important; }
+  .nav { display: none; } @page { size: 1280px 720px; margin: 0; } }
+</style></head>
+<body><div class="deck">
+<section class="slide title">
+  <div class="kicker">Tipoff · Phase 1 · v2 · October 2026</div>
+  <h1>Where the model stands</h1>
+  <p class="sub">Prediction-market signals → merchant decisions.<br>Backtested on 296 real events across the NBA, NHL, NFL and MLB (two seasons each).</p>
+  <div class="foot">Everything in this deck is generated from the backtest outputs (pre-registration sha256 8625f39966bc…). Demand is measured with search interest, not real orders.</div>
+</section>
+<section class="slide">
+  <div class="kicker">The answer</div>
+  <h2>Our signal makes merchants money. The market's number is the edge only in the NFL.</h2>
+  <div class="three">
+    <div class="big good"><div class="tag"><i></i>Proven in backtest</div><div class="num">$366</div><div class="lab">extra profit per event vs doing nothing<br><span>(store selling 20 units/day; +16% of the maximum possible)</span></div></div>
+    <div class="big warn"><div class="tag"><i></i>Partly</div><div class="num">+37% vs +18%</div><div class="lab">NFL: our signal vs a smart merchant's gut feel<br><span>Overall it's only +16% vs +13%, not a reliable edge</span></div></div>
+    <div class="big good"><div class="tag"><i></i>Where the money is</div><div class="num">+70%</div><div class="lab">of the opportunity captured on <b>"stop"</b> calls after eliminations<br><span>Big repricings: +35%. Ordinary good news: +14%.</span></div></div>
+  </div>
+</section>
+<section class="slide">
+  <div class="kicker">What we set out to prove</div>
+  <h2>The chain, and how far along each link is</h2>
+  <div class="steps"><div class="step"><div class="n">1</div><div class="what"><b>Spike → real signal</b><span>780 odds moves → 546 kept. Noise (single wallets, reverting prints, one-venue moves) filtered without hindsight.</span></div><div class="pill good"><i></i>Proven</div></div><div class="step"><div class="n">2</div><div class="what"><b>Signal → plain-English insight</b><span>Every kept move gets a cause: series clinch, elimination, playoff win/loss, rival's game, trade or injury.</span></div><div class="pill good"><i></i>Proven</div></div><div class="step"><div class="n">3</div><div class="what"><b>Demand moves after the signal</b><span>Fans' merch searches follow the signal's direction over the next two weeks (NBA, NFL, MLB).</span></div><div class="pill good"><i></i>Proven</div></div><div class="step"><div class="n">4</div><div class="what"><b>Merchant acts at T=0</b><span>Five merchant policies replayed on every event. No real store has acted on a signal yet.</span></div><div class="pill warn"><i></i>Simulated</div></div><div class="step"><div class="n">5</div><div class="what"><b>Merchant makes more money</b><span>Yes vs doing nothing ($366/event). Vs a smart merchant: only clearly in the NFL.</span></div><div class="pill warn"><i></i>Simulated</div></div></div>
+  <div class="foot">"Proven" = shown in historical data with out-of-sample tests. "Simulated" = replayed with a model of merchant behaviour; needs real store orders to confirm.</div>
+</section>
+<section class="slide">
+  <div class="kicker">How the model works</div>
+  <h2>Five steps, all using only information available at the moment the signal fires</h2>
+  <div class="pipe">
+    <div><b>1 · Sense</b><span>Hourly title odds for every team, Polymarket + Kalshi (as a cross-check), 4 leagues × 2 seasons</span><em>780 candidate moves</em></div>
+    <div><b>2 · Filter</b><span>Move must hold 6 hours, Kalshi must agree, enough trades, not driven by one wallet</span><em>546 kept</em></div>
+    <div><b>3 · Classify</b><span>Which game or news caused it? Clinch, win, loss, elimination, title, rival's game, off-court news</span><em>8 event types</em></div>
+    <div><b>4 · Forecast</b><span>Expected 14-day demand for this type of event, adjusted by how far the odds moved. Trained on the other season only</span><em>no lookahead</em></div>
+    <div><b>5 · Act</b><span>Order size (or stop) at T=0, plus a playbook per merchant type</span><em>one decision per event</em></div>
+  </div>
+</section>
+<section class="slide">
+  <div class="kicker">Question 1</div>
+  <h2>Can we tell real signals from noise? <span class="ans good">Yes</span></h2>
+  <div class="two">
+    <div>
+      <p>If a move is real, its <b>size</b> should predict how much demand changes. If it's noise, it shouldn't.</p>
+      <table class="t"><tr><th>League</th><th>Moves → kept</th><th>Kept: size predicts demand (t)</th><th>Rejected (t)</th></tr><tr><td>NFL</td><td>138 → 115</td><td>+10.5</td><td>+2.4</td></tr><tr><td>MLB</td><td>217 → 126</td><td>+6.3</td><td>+5.8</td></tr><tr><td>NBA</td><td>147 → 126</td><td>+2.8</td><td>-0.4</td></tr><tr><td>NHL</td><td>278 → 179</td><td>+0.9</td><td>+1.6</td></tr></table>
+      <p class="small">t above ~2 = a real relationship. Kept moves pass in the NFL, MLB and NBA. Rejected moves are ~0 in the NBA (as they should be), but in thin MLB markets our filter also threw out some real moves: thresholds need tuning per market. NHL: too little demand data.</p>
+    </div>
+    <div class="callout">
+      <b>Example of noise caught</b>
+      <p>October 2024, before the season: one wallet pushed the Pacers' title odds from 1.6% to 6%. No game, no news. A naive "odds spiked" alert would have told Indiana merchants to stock up seven months early. Our filter rejected it, and fan demand never moved.</p>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="kicker">Question 2</div>
+  <h2>Does demand actually move after a signal? <span class="ans good">Yes, and the type of event matters more than the arrow</span></h2>
+  <div class="two">
+    <div><svg viewBox="0 0 620 194" width="620" height="194" class="bars"><line x1="380.0" x2="380.0" y1="0" y2="194" class="zero"/><text x="0" y="28" class="bl">After an elimination</text><text x="0" y="45" class="bn">27 events</text><rect x="248.0" y="14" width="132.0" height="20" rx="4" fill="#e34948"/><text x="240.0" y="29" class="bv" text-anchor="end">−62%</text><text x="0" y="74" class="bl">After good news</text><text x="0" y="91" class="bn">151 events (wins, clinches, good off-court news)</text><rect x="380.0" y="60" width="125.7" height="20" rx="4" fill="#2a78d6"/><text x="513.7" y="75" class="bv" text-anchor="start">+59%</text><text x="0" y="120" class="bl">After a loss (team still alive)</text><text x="0" y="137" class="bn">115 events</text><rect x="380.0" y="106" width="5.9" height="20" rx="4" fill="#a9a8a1"/><text x="393.9" y="121" class="bv" text-anchor="start">+3%</text><text x="0" y="166" class="bl">After winning the title</text><text x="0" y="183" class="bn">3 events (spike lasts ~3 days)</text><rect x="331.6" y="152" width="48.4" height="20" rx="4" fill="#a9a8a1"/><text x="323.6" y="167" class="bv" text-anchor="end">−23%</text></svg>
+      <p class="small">Demand over the next 14 days vs the week before the signal.</p></div>
+    <div>
+      <p>Direction test (does demand follow the odds?): p = <0.001 NFL, <0.001 MLB, 0.002 NBA.</p>
+      <p><b>The trap a raw odds alert falls into:</b> a playoff loss drops a team's title odds, but demand <b>doesn't</b> fall while the team is still playing. Only eliminations collapse demand. That's why we classify every move before acting.</p>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="kicker">Question 3 · your three scenarios</div>
+  <h2>If a merchant got our signal at T=0, would they make more money? <span class="ans good">Yes</span></h2>
+  <table class="t big3">
+    <tr><th>Merchant</th><th>What they do at T=0</th><th>Units sold vs last week</th><th>Extra profit per event</th><th>Share of the max possible</th></tr>
+    <tr><td><b>1 · Does nothing</b></td><td>Re-orders 2 weeks at last week's pace</td><td>−7%</td><td>baseline</td><td>0%</td></tr>
+    <tr><td><b>2 · Smart merchant</b></td><td>Knows the headline, orders what that kind of news usually means</td><td>+2%</td><td>$307</td><td>+13%</td></tr>
+    <tr class="hl"><td><b>3 · Tipoff</b></td><td>Our event type + how far the odds moved</td><td>+3%</td><td><b>$366</b></td><td><b>+16%</b></td></tr>
+    <tr class="dim"><td>Perfect hindsight</td><td>Knew exactly what demand would be</td><td>+25%</td><td>$2,347</td><td>100%</td></tr>
+  </table>
+  <p class="small">296 events. One order at T=0 covering 14 days, delivered instantly, no top-ups. Store sells 20 units/day; $30 retail, $12 cost, 30% recovered on leftovers. Tipoff's 90% confidence range: +6% to +25% of the max, entirely above zero. Demand over these windows ran +25% vs the week before; "does nothing" ran out of stock on the big days and over-stocked after eliminations.</p>
+</section>
+<section class="slide">
+  <div class="kicker">Worked example · Luka Dončić traded to the Lakers, Feb 2, 2025</div>
+  <h2>The signal fired at 8am. Demand came in at 6.4× the previous week's pace.</h2>
+  <div class="two">
+    <div><svg viewBox="0 0 620 194" width="620" height="194" class="bars"><text x="0" y="28" class="bl">Does nothing</text><text x="0" y="45" class="bn">sold out on day 0</text><rect x="230.0" y="14" width="53.1" height="20" rx="4" fill="#a9a8a1"/><text x="291.1" y="29" class="bv" text-anchor="start">1.2× last week</text><text x="0" y="74" class="bl">Smart merchant</text><rect x="230.0" y="60" width="91.0" height="20" rx="4" fill="#a9a8a1"/><text x="329.0" y="75" class="bv" text-anchor="start">2.1× last week</text><text x="0" y="120" class="bl">Tipoff</text><rect x="230.0" y="106" width="71.1" height="20" rx="4" fill="#2a78d6"/><text x="309.1" y="121" class="bv" text-anchor="start">1.7× last week</text><text x="0" y="166" class="bl">Perfect hindsight</text><rect x="230.0" y="152" width="273.7" height="20" rx="4" fill="#cde2fb"/><text x="511.7" y="167" class="bv" text-anchor="start">6.4× last week</text></svg>
+      <p class="small">How much stock each merchant ordered at T=0, as a multiple of what they sold the week before (scaled to 14 days).</p></div>
+    <div>
+      <table class="t"><tr><th>Merchant</th><th>Profit (14 days)</th></tr>
+      <tr><td>Does nothing</td><td>$6,241</td></tr><tr><td>Smart merchant</td><td>$10,701</td></tr>
+      <tr class="hl"><td>Tipoff</td><td>$8,360</td></tr><tr class="dim"><td>Perfect hindsight</td><td>$32,184</td></tr></table>
+      <p><b>Honest read:</b> everyone under-ordered. Tipoff beat doing nothing by $2,119 but ordered less than the smart merchant. Rare shocks this big are the hardest thing to size: there are too few of them to learn from.</p>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="kicker">Question 4 · the reframe</div>
+  <h2>Is the market's number better than a smart merchant's gut? <span class="ans warn">Only in the NFL</span></h2>
+  <div class="two">
+    <div><svg viewBox="0 0 620 148" width="620" height="148" class="bars"><line x1="284.54545454545456" x2="284.54545454545456" y1="0" y2="148" class="zero"/><text x="0" y="28" class="bl">NFL</text><text x="0" y="45" class="bn">gut feel +18% · p = 0.001</text><rect x="284.5" y="14" width="201.1" height="20" rx="4" fill="#2a78d6"/><text x="493.7" y="29" class="bv" text-anchor="start">+37%</text><text x="0" y="74" class="bl">MLB</text><text x="0" y="91" class="bn">gut feel +19% · p = 0.745</text><rect x="284.5" y="60" width="88.4" height="20" rx="4" fill="#2a78d6"/><text x="381.0" y="75" class="bv" text-anchor="start">+16%</text><text x="0" y="120" class="bl">NBA</text><text x="0" y="137" class="bn">gut feel −2% · p = 0.930</text><rect x="251.4" y="106" width="33.1" height="20" rx="4" fill="#2a78d6"/><text x="243.4" y="121" class="bv" text-anchor="end">−6%</text></svg>
+      <p class="small">Tipoff's share of the max possible profit, by league. NHL: too few events with usable data (US merch searches are sparse).</p></div>
+    <div>
+      <p><b>Overall:</b> Tipoff +16% vs smart merchant +13% (p = 0.210): not a reliable edge.</p>
+      <p><b>NFL:</b> Tipoff +37% vs +18% (p = 0.001), ahead in all 6 robustness variants (+11 to +22 points).</p>
+      <p><b>Why it might be the NFL:</b> 17 games, so every result moves the season; one decision a week; the biggest merch market. This was not a pre-registered hypothesis, so it needs confirming on the live 2026 season.</p>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="kicker">Where the money is</div>
+  <h2>"Stop" and "big moves" pay most. Ordinary good news pays less.</h2>
+  <div class="two">
+    <div><svg viewBox="0 0 620 194" width="620" height="194" class="bars"><text x="0" y="28" class="bl">Stop after elimination</text><text x="0" y="45" class="bn">27 events · demand −62%</text><rect x="230.0" y="14" width="263.4" height="20" rx="4" fill="#2a78d6"/><text x="501.4" y="29" class="bv" text-anchor="start">+70%</text><text x="0" y="74" class="bl">Biggest 25% of odds moves</text><text x="0" y="91" class="bn">74 events (exploratory)</text><rect x="230.0" y="60" width="132.0" height="20" rx="4" fill="#2a78d6"/><text x="370.0" y="75" class="bv" text-anchor="start">+35%</text><text x="0" y="120" class="bl">Ordinary good news</text><text x="0" y="137" class="bn">151 events · demand +59%</text><rect x="230.0" y="106" width="51.7" height="20" rx="4" fill="#2a78d6"/><text x="289.7" y="121" class="bv" text-anchor="start">+14%</text><text x="0" y="166" class="bl">Loss, team still alive</text><text x="0" y="183" class="bn">115 events</text><rect x="230.0" y="152" width="16.0" height="20" rx="4" fill="#2a78d6"/><text x="254.0" y="167" class="bv" text-anchor="start">+4%</text></svg>
+      <p class="small">Tipoff's share of the max possible profit, by type of event.</p></div>
+    <div>
+      <p><b>Stop:</b> when a team is eliminated, demand falls about 60% within two weeks. A merchant who simply stops restocking that night captures most of the opportunity. That's the easiest win to automate and to sell.</p>
+      <p><b>Big moves:</b> the market is best at telling you <i>which</i> news is big enough to act on.</p>
+      <p><b>Ordinary good news:</b> bump sizes vary too much from event to event to size precisely from search data.</p>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="kicker">Integrity</div>
+  <h2>How we kept ourselves from fooling ourselves</h2>
+  <div class="grid">
+    <div><b>Locked the test before seeing results</b><span>Design written and fingerprinted (sha256 8625f39966…) before the first v2 run.</span></div>
+    <div><b>No peeking ahead</b><span>Signals use only prices up to the moment they fire; every forecast is trained on the other season.</span></div>
+    <div><b>Two fixes, both disclosed</b><span>A model blow-up on title wins (original spec: Tipoff −2%) and game moves mislabelled as news. Before/after shown on the site.</span></div>
+    <div><b>Honest uncertainty</b><span>Confidence ranges resample whole team-seasons, because one team's playoff signals are related.</span></div>
+    <div><b>Placebo test</b><span>Shuffling the odds numbers mostly erases Tipoff's edge (+13% vs +16%, p = 0.065): borderline, not conclusive.</span></div>
+    <div><b>Robustness</b><span>Results re-run with 7- and 21-day windows, different margins, pooled training. Overall conclusions hold; NFL edge holds in every variant.</span></div>
+  </div>
+</section>
+<section class="slide">
+  <div class="kicker">What's NOT proven yet</div>
+  <h2>The gaps, in order of importance</h2>
+  <ol class="gaps">
+    <li><b>Search interest is not sales.</b> Every demand number is Google search volume for team merch. Real Shopify orders could move every result, up or down. <em>Biggest gap.</em></li>
+    <li><b>No real merchant has acted on a signal.</b> The merchant behaviour is simulated.</li>
+    <li><b>Delivery delays were ignored</b> (your simplification). Our v1 test with real lead times: signals help slow-ordering stores most and fast print-on-demand stores least.</li>
+    <li><b>The NFL edge was found, not predicted.</b> It needs an out-of-sample confirmation.</li>
+    <li><b>Thin markets.</b> NHL demand data is too sparse to score; MLB's noise filter is too strict.</li>
+    <li><b>Small sample of rare shocks.</b> Trades and season-ending injuries (the Luka type) are too few to size well.</li>
+  </ol>
+</section>
+<section class="slide">
+  <div class="kicker">What it means for the startup</div>
+  <h2>The reframe is half right, and that's enough to build on</h2>
+  <div class="two">
+    <div>
+      <p><b>The market as a detector: works.</b> It tells you something happened, which way it cuts, and whether it's big.</p>
+      <p><b>The market as a ruler for order size: works in the NFL,</b> not (yet) in the NBA or MLB.</p>
+      <p><b>So the product is an act/stop radar:</b></p>
+      <ul><li>Stop: pause ads, cancel orders, mark down the night a season ends</li><li>Act: alert only on big repricings</li><li>Size precisely where proven (NFL first); elsewhere give a direction and a range</li></ul>
+    </div>
+    <div>
+      <p><b>Price on profit, not sales.</b> Signal-following merchants sell about +11% more units, but some of that comes with leftover stock. A cut of sales would look good while costing the merchant money.</p>
+      <p><b>Best customers: stores that commit early.</b> With real lead times (v1), signals added +9% profit for 14-day-lead licensed sellers and about nothing for print-on-demand.</p>
+      <p><b>Bigger prize later:</b> long-lead decisions (imports, tariffs) where big repricings are the norm.</p>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="kicker">Next 30 days</div>
+  <h2>Turn "simulated" into "proven"</h2>
+  <div class="two">
+    <div>
+      <ol class="gaps">
+        <li><b>Week 1:</b> lock a forward test on the live 2026 NFL season, with the same pre-registration discipline. Log every signal and the order each merchant type would place.</li>
+        <li><b>Week 2:</b> sign 3–5 design-partner stores (NFL fan merch first), pull their order history, and re-run this exact test on real orders.</li>
+        <li><b>Week 3:</b> add series and player markets; tune the noise filter per market liquidity.</li>
+        <li><b>Week 4:</b> ship the act/stop radar MVP to partners; measure the actions they take and the dollars saved.</li>
+      </ol>
+    </div>
+    <div class="callout">
+      <b>What we need</b>
+      <ul><li>Design-partner store orders (anonymised Shopify exports)</li><li>Your Polymarket parquet backtester (full trade history)</li><li>A decision: NFL-first?</li><li>An Anthropic API key for live news classification</li></ul>
+    </div>
+  </div>
+</section></div>
+<div class="nav"><span id="pos"></span><a href="#" onclick="toggle();return false">Present (P)</a><a href="Tipoff-state-of-the-model.pdf">PDF</a><a href="./#answer">Full site</a></div>
+<script>
+const slides = [...document.querySelectorAll('.slide')];
+slides.forEach((s, i) => s.dataset.n = `${i + 1} / ${slides.length}`);
+let cur = 0, present = false;
+function fit() {
+  const sc = Math.min(innerWidth / 1280, innerHeight / 720);
+  slides.forEach((s) => { s.style.transform = present ? `translate(-50%,-50%) scale(${sc})` : (innerWidth < 1320 ? `scale(${(innerWidth - 24) / 1280})` : ''); if (!present) s.style.marginBottom = innerWidth < 1320 ? `${-720 * (1 - (innerWidth - 24) / 1280)}px` : ''; });
+}
+function show(i) { cur = Math.max(0, Math.min(slides.length - 1, i)); slides.forEach((s, k) => s.classList.toggle('on', k === cur)); document.getElementById('pos').textContent = `${cur + 1} / ${slides.length}`; }
+function toggle() { present = !present; document.body.classList.toggle('present', present); show(cur); fit(); }
+addEventListener('keydown', (e) => { if (e.key === 'p' || e.key === 'f') toggle(); if (!present) return; if (['ArrowRight', ' ', 'PageDown'].includes(e.key)) show(cur + 1); if (['ArrowLeft', 'PageUp'].includes(e.key)) show(cur - 1); if (e.key === 'Escape') toggle(); });
+addEventListener('click', (e) => { if (present && !e.target.closest('.nav')) show(cur + (e.clientX > innerWidth / 3 ? 1 : -1)); });
+addEventListener('resize', fit); fit(); show(0);
+</script></body></html>

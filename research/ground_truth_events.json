@@ -1,0 +1,1759 @@
+{
+  "events": [
+    {
+      "date": "2025-02-02",
+      "time_et": "00:21",
+      "season": "2024-25",
+      "teams": [
+        "LAL",
+        "DAL",
+        "UTA"
+      ],
+      "category": "trade",
+      "headline": "Mavericks trade Luka Doncic to Lakers for Anthony Davis (3-team deal with Jazz)",
+      "detail": "Reported by ESPN's Shams Charania late Sat Feb 1 / just after midnight ET Feb 2; ESPN story timestamp 12:21 AM ET Feb 2 (initial social post minutes earlier, exact minute unverified). LAL get Doncic, Kleber, Morris; DAL get Davis, Max Christie, LAL 2029 1st; UTA get Hood-Schifino + 2nds. Doncic had not requested a trade; first time two reigning All-NBA players swapped midseason.",
+      "source_url": "https://www.espn.com/nba/story/_/id/43659380/sources-mavericks-trading-doncic-lakers-anthony-davis"
+    },
+    {
+      "date": "2025-02-03",
+      "time_et": null,
+      "season": "2024-25",
+      "teams": [
+        "SAS",
+        "SAC",
+        "CHI"
+      ],
+      "category": "trade",
+      "headline": "Kings trade De'Aaron Fox to Spurs in 3-team deal (Zach LaVine to Sacramento)",
+      "detail": "Spurs announced the deal Monday Feb 3, 2025 (first reported the prior night; exact report time unverified). SAS get Fox + Jordan McLaughlin; SAC get LaVine, Sidy Cissoko, three 1sts, three 2nds; CHI get Zach Collins, Tre Jones, Kevin Huerter and their 2025 1st back.",
+      "source_url": "https://thescore.com/news/3208121"
+    },
+    {
+      "date": "2025-02-05",
+      "time_et": "20:19",
+      "season": "2024-25",
+      "teams": [
+        "GSW",
+        "MIA",
+        "UTA",
+        "DET",
+        "TOR"
+      ],
+      "category": "trade",
+      "headline": "Heat trade Jimmy Butler to Warriors in five-team deal",
+      "detail": "Reported Wed Feb 5, 2025 shortly before GSW-UTA tip (time = ESPN story timestamp). GSW send Wiggins, Kyle Anderson, top-10-protected 2025 1st to MIA; Schroder to UTA; Lindy Waters to DET. Butler opted out and agreed to 2-yr/$111M extension. Ended a ~2-month saga with three Heat suspensions.",
+      "source_url": "https://www.espn.com/nba/story/_/id/43710183/sources-heat-finalizing-jimmy-butler-trade-warriors"
+    },
+    {
+      "date": "2025-02-08",
+      "time_et": null,
+      "season": "2024-25",
+      "teams": [
+        "DAL"
+      ],
+      "category": "injury_own_star",
+      "headline": "Anthony Davis strains left adductor in Mavericks debut",
+      "detail": "Davis had 26 pts/16 reb in DAL's 116-105 win over HOU but left in the 3rd quarter; out multiple weeks (about six). Undercut the Davis side of the Doncic trade immediately.",
+      "source_url": "https://www.espn.com/nba/recap/_/gameId/401705307"
+    },
+    {
+      "date": "2025-02-10",
+      "time_et": null,
+      "season": "2024-25",
+      "teams": [
+        "LAL"
+      ],
+      "category": "return_from_injury",
+      "headline": "Luka Doncic makes Lakers debut vs. Jazz (first game since Christmas calf strain)",
+      "detail": "14 pts in ~24 min in a 132-113 win; first appearance since a Dec 25, 2024 calf strain.",
+      "source_url": "https://www.nba.com/news/luka-doncic-possible-lakers-debut"
+    },
+    {
+      "date": "2025-02-20",
+      "time_et": null,
+      "season": "2024-25",
+      "teams": [
+        "SAS"
+      ],
+      "category": "injury_own_star",
+      "headline": "Victor Wembanyama ruled out for season with deep vein thrombosis (right shoulder)",
+      "detail": "Diagnosed after All-Star weekend; Spurs said not career-threatening. Removed the Fox+Wembanyama pairing for the rest of 2024-25.",
+      "source_url": "https://www.nba.com/news/victor-wembanyama-shoulder-out-for-season"
+    },
+    {
+      "date": "2025-03-03",
+      "time_et": null,
+      "season": "2024-25",
+      "teams": [
+        "DAL"
+      ],
+      "category": "injury_own_star",
+      "headline": "Kyrie Irving tears left ACL vs. Kings; out for season",
+      "detail": "Injury Mar 3; torn ACL announced Mar 4. Compounded post-Doncic-trade collapse; DAL later lost in play-in.",
+      "source_url": "https://www.espn.com/nba/story/_/id/44107102/sources-mavericks-kyrie-irving-torn-acl-rest-season"
+    },
+    {
+      "date": "2025-03-06",
+      "time_et": null,
+      "season": "2024-25",
+      "teams": [
+        "NYK"
+      ],
+      "category": "injury_own_star",
+      "headline": "Jalen Brunson sprains right ankle vs. Lakers; out at least 2 weeks",
+      "detail": "Injured in OT of a 113-109 loss to LAL; returned in final two weeks of regular season.",
+      "source_url": "https://www.espn.com/nba/story/_/id/44156133/new-york-knicks-jalen-brunson-miss-least-2-weeks-right-ankle-sprain"
+    },
+    {
+      "date": "2025-04-08",
+      "time_et": null,
+      "season": "2024-25",
+      "teams": [
+        "DEN"
+      ],
+      "category": "coaching_change",
+      "headline": "Nuggets fire coach Michael Malone and GM Calvin Booth with 3 games left",
+      "detail": "Unprecedented late-season change; David Adelman named interim (hired full-time May 22, 2025). DEN were 47-32 on a 4-game skid.",
+      "source_url": "https://www.espn.com/nba/story/_/id/44588997/nuggets-fire-coach-michael-malone-stunner"
+    },
+    {
+      "date": "2025-04-26",
+      "time_et": "15:30",
+      "season": "2024-25",
+      "teams": [
+        "OKC",
+        "MEM"
+      ],
+      "category": "series_clinch",
+      "headline": "Thunder sweep Grizzlies 4-0 (1st round)",
+      "detail": "Game 4 at Memphis, OKC 117-115.",
+      "source_url": "https://www.nba.com/game/okc-vs-mem-0042400144"
+    },
+    {
+      "date": "2025-04-27",
+      "time_et": "21:30",
+      "season": "2024-25",
+      "teams": [
+        "MIL",
+        "IND"
+      ],
+      "category": "injury_own_star",
+      "headline": "Damian Lillard tears left Achilles in Game 4 vs. Pacers",
+      "detail": "Third game back from a right-calf DVT; MIL lost 129-103 to fall behind 3-1. Confirmed by MRI Apr 28. Rival-star shock for IND.",
+      "source_url": "https://www.opb.org/article/2025/04/28/damian-lillard-achilles"
+    },
+    {
+      "date": "2025-04-28",
+      "time_et": "19:30",
+      "season": "2024-25",
+      "teams": [
+        "CLE",
+        "MIA"
+      ],
+      "category": "series_clinch",
+      "headline": "No. 1 Cavaliers sweep Heat 4-0",
+      "detail": "Game 4 at Miami, CLE 138-83.",
+      "source_url": "https://www.nba.com/game/cle-vs-mia-0042400104"
+    },
+    {
+      "date": "2025-04-29",
+      "time_et": "18:00",
+      "season": "2024-25",
+      "teams": [
+        "IND",
+        "MIL"
+      ],
+      "category": "series_clinch",
+      "headline": "Pacers eliminate Bucks 4-1 in overtime Game 5",
+      "detail": "IND 119-118 (OT) at home.",
+      "source_url": "https://www.nba.com/game/mil-vs-ind-0042400135"
+    },
+    {
+      "date": "2025-04-29",
+      "time_et": "20:30",
+      "season": "2024-25",
+      "teams": [
+        "BOS",
+        "ORL"
+      ],
+      "category": "series_clinch",
+      "headline": "Celtics eliminate Magic 4-1",
+      "detail": "BOS 120-89 in Game 5.",
+      "source_url": "https://www.nba.com/game/orl-vs-bos-0042400115"
+    },
+    {
+      "date": "2025-04-30",
+      "time_et": "22:00",
+      "season": "2024-25",
+      "teams": [
+        "LAL",
+        "MIN"
+      ],
+      "category": "series_elimination",
+      "headline": "Timberwolves eliminate Doncic's Lakers 4-1 (1st round)",
+      "detail": "MIN 103-96 at LAL in Game 5. Ends the first Doncic-Lakers playoff run within 3 months of the trade.",
+      "source_url": "https://www.nba.com/game/min-vs-lal-0042400165"
+    },
+    {
+      "date": "2025-05-01",
+      "time_et": "19:30",
+      "season": "2024-25",
+      "teams": [
+        "NYK",
+        "DET"
+      ],
+      "category": "series_clinch",
+      "headline": "Knicks eliminate Pistons 4-2",
+      "detail": "NYK 116-113 in Game 6 at Detroit.",
+      "source_url": "https://www.nba.com/game/nyk-vs-det-0042400126"
+    },
+    {
+      "date": "2025-05-03",
+      "time_et": "19:30",
+      "season": "2024-25",
+      "teams": [
+        "DEN",
+        "LAC"
+      ],
+      "category": "series_clinch",
+      "headline": "Nuggets beat Clippers in Game 7",
+      "detail": "DEN 120-101 at home.",
+      "source_url": "https://www.nba.com/game/lac-vs-den-0042400177"
+    },
+    {
+      "date": "2025-05-04",
+      "time_et": "20:30",
+      "season": "2024-25",
+      "teams": [
+        "GSW",
+        "HOU"
+      ],
+      "category": "series_clinch",
+      "headline": "Warriors (7) beat No. 2 Rockets in Game 7",
+      "detail": "GSW 103-89 at Houston.",
+      "source_url": "https://www.nba.com/game/gsw-vs-hou-0042400157"
+    },
+    {
+      "date": "2025-05-06",
+      "time_et": "21:30",
+      "season": "2024-25",
+      "teams": [
+        "GSW",
+        "MIN"
+      ],
+      "category": "injury_own_star",
+      "headline": "Stephen Curry strains left hamstring in Game 1 at Minnesota",
+      "detail": "Grade 1 strain, left in 2nd quarter; GSW still won 99-88 but Curry missed the rest of the series (GSW lost 4-1).",
+      "source_url": "https://www.ksat.com/sports/2025/05/07/curry-leaves-warriors-series-opener-vs-wolves-in-2nd-quarter-with-strained-hamstring/"
+    },
+    {
+      "date": "2025-05-12",
+      "time_et": "19:30",
+      "season": "2024-25",
+      "teams": [
+        "BOS",
+        "NYK"
+      ],
+      "category": "injury_own_star",
+      "headline": "Jayson Tatum ruptures right Achilles late in Game 4 at MSG",
+      "detail": "Injured with 2:58 left in Q4 (approx. 9:45-10:00 PM ET; tip 7:30 PM) of a 121-113 NYK win; NYK led series 3-1. Surgery May 13. Out most/all of 2025-26.",
+      "source_url": "https://www.wgme.com/sports/content/boston-celtics-superstar-jayson-tatum-has-surgery-to-repair-ruptured-achilles-tendon-nba-playoffs-new-york-knicks"
+    },
+    {
+      "date": "2025-05-12",
+      "time_et": "19:30",
+      "season": "2024-25",
+      "teams": [
+        "NYK",
+        "BOS"
+      ],
+      "category": "injury_rival_star",
+      "headline": "Rival-star shock for Knicks: Tatum's Achilles rupture removes defending champs' best player",
+      "detail": "Mirror record of the Tatum injury from the Knicks' perspective (NYK up 3-1). NYK closed the series 4 days later and reached first ECF since 2000.",
+      "source_url": "https://www.wgme.com/sports/content/boston-celtics-superstar-jayson-tatum-has-surgery-to-repair-ruptured-achilles-tendon-nba-playoffs-new-york-knicks"
+    },
+    {
+      "date": "2025-05-12",
+      "time_et": null,
+      "season": "2024-25",
+      "teams": [
+        "DAL"
+      ],
+      "category": "draft_lottery",
+      "headline": "Mavericks win 2025 draft lottery with 1.8% odds (No. 1 pick -> Cooper Flagg)",
+      "detail": "4th-lowest odds to win since 1985; SAS 2nd, PHI 3rd, CHA 4th. Revived fan anger/'rigged' claims over the Doncic trade.",
+      "source_url": "https://www.nba.com/news/2025-nba-draft-lottery-result"
+    },
+    {
+      "date": "2025-05-13",
+      "time_et": "19:00",
+      "season": "2024-25",
+      "teams": [
+        "IND",
+        "CLE"
+      ],
+      "category": "series_clinch",
+      "headline": "Pacers eliminate No. 1 Cavaliers 4-1",
+      "detail": "IND 114-105 at Cleveland in Game 5.",
+      "source_url": "https://www.nba.com/game/ind-vs-cle-0042400205"
+    },
+    {
+      "date": "2025-05-14",
+      "time_et": "21:30",
+      "season": "2024-25",
+      "teams": [
+        "MIN",
+        "GSW"
+      ],
+      "category": "series_clinch",
+      "headline": "Timberwolves eliminate Curry-less Warriors 4-1",
+      "detail": "MIN 121-110 in Game 5.",
+      "source_url": "https://www.nba.com/game/gsw-vs-min-0042400235"
+    },
+    {
+      "date": "2025-05-16",
+      "time_et": "20:00",
+      "season": "2024-25",
+      "teams": [
+        "NYK",
+        "BOS"
+      ],
+      "category": "series_clinch",
+      "headline": "Knicks eliminate defending-champion Celtics 4-2; first ECF since 2000",
+      "detail": "NYK 119-81 in Game 6 at MSG.",
+      "source_url": "https://www.nba.com/game/bos-vs-nyk-0042400216"
+    },
+    {
+      "date": "2025-05-18",
+      "time_et": "15:30",
+      "season": "2024-25",
+      "teams": [
+        "OKC",
+        "DEN"
+      ],
+      "category": "series_clinch",
+      "headline": "Thunder beat Nuggets in Game 7",
+      "detail": "OKC 125-93 at home.",
+      "source_url": "https://www.nba.com/game/den-vs-okc-0042400227"
+    },
+    {
+      "date": "2025-05-28",
+      "time_et": "20:30",
+      "season": "2024-25",
+      "teams": [
+        "OKC",
+        "MIN"
+      ],
+      "category": "series_clinch",
+      "headline": "Thunder beat Timberwolves 4-1 to win West, reach first Finals since 2012",
+      "detail": "OKC 124-94 in Game 5.",
+      "source_url": "https://www.nba.com/game/min-vs-okc-0042400315"
+    },
+    {
+      "date": "2025-05-31",
+      "time_et": "20:00",
+      "season": "2024-25",
+      "teams": [
+        "IND",
+        "NYK"
+      ],
+      "category": "series_clinch",
+      "headline": "Pacers eliminate Knicks 4-2 in ECF; reach first Finals since 2000",
+      "detail": "IND 125-108 in Game 6 at Indianapolis.",
+      "source_url": "https://www.nba.com/game/nyk-vs-ind-0042400306"
+    },
+    {
+      "date": "2025-06-03",
+      "time_et": null,
+      "season": "2025-26",
+      "teams": [
+        "NYK"
+      ],
+      "category": "coaching_change",
+      "headline": "Knicks fire Tom Thibodeau days after ECF loss",
+      "detail": "Dismissed after 5 seasons; Mike Brown hired July 7, 2025.",
+      "source_url": "https://www.nba.com/knicks/news/knicks-announce-coaching-change"
+    },
+    {
+      "date": "2025-06-05",
+      "time_et": "20:30",
+      "season": "2024-25",
+      "teams": [
+        "IND",
+        "OKC"
+      ],
+      "category": "game_result",
+      "headline": "Finals Game 1: Haliburton jumper with 0.3s left steals Game 1 in OKC",
+      "detail": "IND 111-110; Pacers led for only 0.3 seconds.",
+      "source_url": "https://www.espn.com/nba/story/_/id/45461714/pacers-sink-thunder-tyrese-haliburton-last-second-shot"
+    },
+    {
+      "date": "2025-06-16",
+      "time_et": "20:30",
+      "season": "2024-25",
+      "teams": [
+        "OKC",
+        "IND"
+      ],
+      "category": "game_result",
+      "headline": "Finals Game 5: Thunder win 120-109 for 3-2 lead; Haliburton strains right calf",
+      "detail": "Haliburton played Game 6 and 7 on the calf strain.",
+      "source_url": "https://www.nba.com/game/ind-vs-okc-0042400405"
+    },
+    {
+      "date": "2025-06-19",
+      "time_et": "20:30",
+      "season": "2024-25",
+      "teams": [
+        "IND",
+        "OKC"
+      ],
+      "category": "game_result",
+      "headline": "Finals Game 6: Pacers rout Thunder 108-91 to force Game 7",
+      "detail": "First Finals Game 7 since 2016.",
+      "source_url": "https://www.nba.com/game/okc-vs-ind-0042400406"
+    },
+    {
+      "date": "2025-06-22",
+      "time_et": "12:45",
+      "season": "2025-26",
+      "teams": [
+        "HOU",
+        "PHX"
+      ],
+      "category": "trade",
+      "headline": "Suns trade Kevin Durant to Rockets (later a record 7-team trade)",
+      "detail": "Reported the afternoon of Finals Game 7 (time = ESPN story timestamp). PHX get Jalen Green, Dillon Brooks, No. 10 pick, five 2nds; finalized July 6, 2025 as a 7-team, 13-player deal.",
+      "source_url": "https://www.espn.com/nba/story/_/id/45561747/sources-suns-trading-kevin-durant-rockets-blockbuster-deal"
+    },
+    {
+      "date": "2025-06-22",
+      "time_et": "20:00",
+      "season": "2024-25",
+      "teams": [
+        "IND",
+        "OKC"
+      ],
+      "category": "injury_own_star",
+      "headline": "Tyrese Haliburton tears right Achilles in 1st quarter of Finals Game 7",
+      "detail": "Injured with 4:55 left in Q1 (approx. 8:20 PM ET); IND still led 48-47 at half before OKC pulled away.",
+      "source_url": "https://www.si.com/nba/pacers/news/pacers-star-tyrese-haliburton-confirms-devastating-torn-achilles-injury"
+    },
+    {
+      "date": "2025-06-22",
+      "time_et": "20:00",
+      "season": "2024-25",
+      "teams": [
+        "OKC",
+        "IND"
+      ],
+      "category": "injury_rival_star",
+      "headline": "Rival-star shock for Thunder: Haliburton exits Game 7 with Achilles tear",
+      "detail": "Mirror record of the Haliburton injury from OKC's perspective; an in-game probability shock just before the title was decided.",
+      "source_url": "https://www.si.com/nba/pacers/news/pacers-star-tyrese-haliburton-confirms-devastating-torn-achilles-injury"
+    },
+    {
+      "date": "2025-06-22",
+      "time_et": "20:00",
+      "season": "2024-25",
+      "teams": [
+        "OKC",
+        "IND"
+      ],
+      "category": "series_clinch",
+      "headline": "Thunder win 2025 NBA championship, beat Pacers 103-91 in Game 7",
+      "detail": "First title of the OKC era; Shai Gilgeous-Alexander Finals MVP (29 pts, 12 ast).",
+      "source_url": "https://www.espn.com/nba/recap/_/gameId/401766128"
+    },
+    {
+      "date": "2025-06-23",
+      "time_et": null,
+      "season": "2025-26",
+      "teams": [
+        "BOS",
+        "POR"
+      ],
+      "category": "trade",
+      "headline": "Celtics trade Jrue Holiday to Trail Blazers for Anfernee Simons",
+      "detail": "First of two Celtics salary-shedding deals in two days with Tatum out.",
+      "source_url": "https://espn.com/nba/story?_slug_=nba-trade-tracker-details-every-deal-2025-offseason&id=45531560"
+    },
+    {
+      "date": "2025-06-24",
+      "time_et": null,
+      "season": "2025-26",
+      "teams": [
+        "BOS",
+        "ATL"
+      ],
+      "category": "trade",
+      "headline": "Celtics trade Kristaps Porzingis to Hawks (3-team with Nets)",
+      "detail": "BOS received Georges Niang + 2nd.",
+      "source_url": "https://espn.com/nba/story?_slug_=nba-trade-tracker-details-every-deal-2025-offseason&id=45531560"
+    },
+    {
+      "date": "2025-06-25",
+      "time_et": null,
+      "season": "2025-26",
+      "teams": [
+        "DAL"
+      ],
+      "category": "other",
+      "headline": "Mavericks draft Cooper Flagg No. 1 overall",
+      "detail": "2025 NBA Draft at Barclays Center, June 25-26.",
+      "source_url": "https://www.nba.com/news/dallas-mavericks-take-cooper-flagg-no-1-pick-nba-draft"
+    },
+    {
+      "date": "2025-07-01",
+      "time_et": null,
+      "season": "2025-26",
+      "teams": [
+        "MIL",
+        "IND"
+      ],
+      "category": "signing",
+      "headline": "Bucks waive and stretch Damian Lillard; Myles Turner leaves Pacers for Bucks (4 yr/$107M)",
+      "detail": "Removes Turner from the reigning East champions days after Haliburton's Achilles tear.",
+      "source_url": "https://www.espn.com/nba/story/_/id/45630759/sources-free-agent-myles-turner-bucks-reach-4-year-107m-deal"
+    },
+    {
+      "date": "2025-07-07",
+      "time_et": "15:51",
+      "season": "2025-26",
+      "teams": [
+        "IND"
+      ],
+      "category": "injury_own_star",
+      "headline": "Pacers confirm Haliburton will miss entire 2025-26 season",
+      "detail": "Kevin Pritchard: 'He will not play next year though.' (time = ESPN story timestamp). Effectively removed the 2025 East champion from the 2026 title race; rival-team beneficiaries NYK/CLE/DET/BOS.",
+      "source_url": "https://www.espn.com/nba/story/_/id/45690127/pacers-confirm-tyrese-haliburton-miss-entire-2025-26-season"
+    },
+    {
+      "date": "2025-07-07",
+      "time_et": null,
+      "season": "2025-26",
+      "teams": [
+        "NYK"
+      ],
+      "category": "coaching_change",
+      "headline": "Knicks hire Mike Brown as head coach",
+      "detail": "",
+      "source_url": "https://www.nba.com/knicks/news/mike-brown-named-new-york-knicks-head-coach"
+    },
+    {
+      "date": "2025-10-23",
+      "time_et": null,
+      "season": "2025-26",
+      "teams": [
+        "POR",
+        "MIA"
+      ],
+      "category": "suspension",
+      "headline": "Chauncey Billups and Terry Rozier arrested in federal gambling cases; both placed on leave",
+      "detail": "Tiago Splitter named POR interim coach.",
+      "source_url": "https://www.espn.com/nba/story/_/id/46695228/sources-terry-rozier-arrested-part-gambling-inquiry"
+    },
+    {
+      "date": "2025-11-14",
+      "time_et": null,
+      "season": "2025-26",
+      "teams": [
+        "SAS"
+      ],
+      "category": "injury_own_star",
+      "headline": "Victor Wembanyama strains left calf vs. Warriors; misses 12 games",
+      "detail": "Initial 2-3 week re-evaluation window; returned Dec 13 in NBA Cup semifinal.",
+      "source_url": "https://www.nba.com/news/spurs-victor-wembanyama-out-calf-strain"
+    },
+    {
+      "date": "2025-12-13",
+      "time_et": null,
+      "season": "2025-26",
+      "teams": [
+        "SAS",
+        "OKC"
+      ],
+      "category": "return_from_injury",
+      "headline": "Wembanyama returns; Spurs beat Thunder in NBA Cup semifinal, ending OKC's 16-game win streak",
+      "detail": "Played on a minutes limit after 12-game absence.",
+      "source_url": "https://www.nba.com/news/victor-wembanyama-could-return-weekend"
+    },
+    {
+      "date": "2025-12-16",
+      "time_et": null,
+      "season": "2025-26",
+      "teams": [
+        "NYK",
+        "SAS"
+      ],
+      "category": "game_result",
+      "headline": "Knicks beat Spurs 124-113 to win NBA Cup in Las Vegas; Brunson Cup MVP",
+      "detail": "First Knicks trophy since 1973; preview of the 2026 Finals matchup.",
+      "source_url": "https://www.espn.com/nba/story/_/id/47331064/knicks-clinch-nba-cup-jalen-brunson-named-tournament-mvp"
+    },
+    {
+      "date": "2026-02-03",
+      "time_et": "20:11",
+      "season": "2025-26",
+      "teams": [
+        "CLE",
+        "LAC"
+      ],
+      "category": "trade",
+      "headline": "Clippers trade James Harden to Cavaliers for Darius Garland",
+      "detail": "Reported Feb 3 (ESPN timestamp); announced Feb 4. CLE went 21-9 after Harden's debut.",
+      "source_url": "https://www.espn.com/nba/story/_/id/47820850/clippers-deal-james-harden-cavs-land-darius-garland"
+    },
+    {
+      "date": "2026-02-04",
+      "time_et": "13:50",
+      "season": "2025-26",
+      "teams": [
+        "DAL",
+        "WAS",
+        "CHA"
+      ],
+      "category": "trade",
+      "headline": "Mavericks trade Anthony Davis to Wizards in 9-player, 3-team deal",
+      "detail": "Closes the Davis side of the Doncic trade one year later; DAL get Middleton and five picks (time = ESPN story timestamp).",
+      "source_url": "https://www.espn.com/nba/story/_/id/47828122/mavericks-trade-anthony-davis-wizards-sources-say"
+    },
+    {
+      "date": "2026-03-06",
+      "time_et": null,
+      "season": "2025-26",
+      "teams": [
+        "BOS"
+      ],
+      "category": "return_from_injury",
+      "headline": "Jayson Tatum returns from Achilles rupture ~10 months later",
+      "detail": "15 pts/12 reb/7 ast in 120-100 win over DAL after missing first 62 games.",
+      "source_url": "https://www.espn.com/nba/story/_/id/48123442/celtics-jayson-tatum-achilles-available-return-friday"
+    },
+    {
+      "date": "2026-04-02",
+      "time_et": null,
+      "season": "2025-26",
+      "teams": [
+        "LAL"
+      ],
+      "category": "injury_own_star",
+      "headline": "Luka Doncic suffers Grade 2 left hamstring strain at OKC; misses rest of season and playoffs",
+      "detail": "Missed final 15 games incl. entire postseason; LAL still beat HOU before being swept by OKC.",
+      "source_url": "https://www.nba.com/news/lakers-luka-doncic-hurts-left-hamstring-in-a-blowout-loss-to-thunder-with-mri-set-for-friday"
+    },
+    {
+      "date": "2026-04-09",
+      "time_et": null,
+      "season": "2025-26",
+      "teams": [
+        "PHI"
+      ],
+      "category": "injury_own_star",
+      "headline": "Joel Embiid undergoes appendectomy; playoff status in doubt",
+      "detail": "Returned Apr 26 (Game 4 vs BOS), 17 days post-surgery.",
+      "source_url": "https://www.nba.com/news/sixers-joel-embiid-out-appendicitis-surgery"
+    },
+    {
+      "date": "2026-04-27",
+      "time_et": "21:30",
+      "season": "2025-26",
+      "teams": [
+        "OKC",
+        "PHX"
+      ],
+      "category": "series_clinch",
+      "headline": "Thunder sweep Suns 4-0",
+      "detail": "OKC 131-122 in Game 4.",
+      "source_url": "https://www.nba.com/game/okc-vs-phx-0042500144"
+    },
+    {
+      "date": "2026-04-28",
+      "time_et": "21:30",
+      "season": "2025-26",
+      "teams": [
+        "SAS",
+        "POR"
+      ],
+      "category": "series_clinch",
+      "headline": "Spurs eliminate Trail Blazers 4-1",
+      "detail": "SAS 114-95 in Game 5.",
+      "source_url": "https://www.nba.com/game/por-vs-sas-0042500155"
+    },
+    {
+      "date": "2026-04-30",
+      "time_et": "19:00",
+      "season": "2025-26",
+      "teams": [
+        "NYK",
+        "ATL"
+      ],
+      "category": "series_clinch",
+      "headline": "Knicks eliminate Hawks 4-2 with 140-89 rout",
+      "detail": "NBA-record 47-point halftime lead; started a 13-game playoff win streak run (from Game 4).",
+      "source_url": "https://www.nba.com/game/nyk-vs-atl-0042500126"
+    },
+    {
+      "date": "2026-04-30",
+      "time_et": "21:30",
+      "season": "2025-26",
+      "teams": [
+        "DEN",
+        "MIN"
+      ],
+      "category": "series_elimination",
+      "headline": "No. 3 Nuggets eliminated 4-2 by Timberwolves",
+      "detail": "MIN 110-98 in Game 6.",
+      "source_url": "https://www.nba.com/game/den-vs-min-0042500166"
+    },
+    {
+      "date": "2026-05-01",
+      "time_et": "21:30",
+      "season": "2025-26",
+      "teams": [
+        "LAL",
+        "HOU"
+      ],
+      "category": "series_clinch",
+      "headline": "Doncic-less Lakers eliminate Rockets 4-2",
+      "detail": "LAL 98-78 in Game 6 at Houston.",
+      "source_url": "https://www.nba.com/game/lal-vs-hou-0042500176"
+    },
+    {
+      "date": "2026-05-02",
+      "time_et": "19:30",
+      "season": "2025-26",
+      "teams": [
+        "BOS",
+        "PHI",
+        "NYK"
+      ],
+      "category": "series_elimination",
+      "headline": "No. 2 Celtics blow 3-1 lead, eliminated by 76ers in Game 7",
+      "detail": "PHI 109-100 at Boston. Removed NYK's most likely 2nd-round opponent (rival-elimination shock for NYK).",
+      "source_url": "https://www.nba.com/game/phi-vs-bos-0042500117"
+    },
+    {
+      "date": "2026-05-03",
+      "time_et": "15:30",
+      "season": "2025-26",
+      "teams": [
+        "DET",
+        "ORL"
+      ],
+      "category": "series_clinch",
+      "headline": "No. 1 Pistons rally from 3-1 down to beat Magic in Game 7",
+      "detail": "DET 116-94; first series win since 2008.",
+      "source_url": "https://www.nba.com/game/orl-vs-det-0042500107"
+    },
+    {
+      "date": "2026-05-03",
+      "time_et": "19:30",
+      "season": "2025-26",
+      "teams": [
+        "CLE",
+        "TOR"
+      ],
+      "category": "series_clinch",
+      "headline": "Cavaliers beat Raptors in Game 7",
+      "detail": "CLE 114-102.",
+      "source_url": "https://www.nba.com/game/tor-vs-cle-0042500137"
+    },
+    {
+      "date": "2026-05-10",
+      "time_et": "15:30",
+      "season": "2025-26",
+      "teams": [
+        "NYK",
+        "PHI"
+      ],
+      "category": "series_clinch",
+      "headline": "Knicks sweep 76ers 4-0 (East semis)",
+      "detail": "NYK 144-114 in Game 4.",
+      "source_url": "https://www.nba.com/game/nyk-vs-phi-0042500214"
+    },
+    {
+      "date": "2026-05-11",
+      "time_et": "22:30",
+      "season": "2025-26",
+      "teams": [
+        "OKC",
+        "LAL"
+      ],
+      "category": "series_clinch",
+      "headline": "Thunder sweep Lakers 4-0 (West semis)",
+      "detail": "OKC 115-110 in Game 4.",
+      "source_url": "https://www.nba.com/game/okc-vs-lal-0042500224"
+    },
+    {
+      "date": "2026-05-15",
+      "time_et": "21:30",
+      "season": "2025-26",
+      "teams": [
+        "SAS",
+        "MIN"
+      ],
+      "category": "series_clinch",
+      "headline": "Spurs eliminate Timberwolves 4-2",
+      "detail": "SAS 139-109 in Game 6.",
+      "source_url": "https://www.nba.com/game/sas-vs-min-0042500236"
+    },
+    {
+      "date": "2026-05-17",
+      "time_et": "20:00",
+      "season": "2025-26",
+      "teams": [
+        "DET",
+        "CLE",
+        "NYK"
+      ],
+      "category": "series_elimination",
+      "headline": "No. 1 Pistons eliminated by Cavaliers in Game 7 after leading 2-0",
+      "detail": "CLE 125-94 at Detroit. Top East seed removed while NYK idle (rival-elimination shock for NYK).",
+      "source_url": "https://www.nba.com/game/cle-vs-det-0042500207"
+    },
+    {
+      "date": "2026-05-20",
+      "time_et": "20:30",
+      "season": "2025-26",
+      "teams": [
+        "OKC",
+        "SAS"
+      ],
+      "category": "injury_own_star",
+      "headline": "Jalen Williams exits WCF Game 2 with left hamstring strain",
+      "detail": "Missed Games 3-5, played 10 min in Game 6, out for Game 7.",
+      "source_url": "https://www.espn.com/nba/story/_/id/48831192/thunder-jalen-williams-exits-first-quarter-west-finals-game-2-vs-spurs"
+    },
+    {
+      "date": "2026-05-25",
+      "time_et": "20:00",
+      "season": "2025-26",
+      "teams": [
+        "NYK",
+        "CLE"
+      ],
+      "category": "series_clinch",
+      "headline": "Knicks sweep Cavaliers to reach first NBA Finals since 1999",
+      "detail": "NYK 130-93 in Game 4 at Cleveland (Memorial Day).",
+      "source_url": "https://www.fox5ny.com/sports/knicks-reach-nba-finals-first-time-since-1999-after-130-93-sweep-cavs"
+    },
+    {
+      "date": "2026-05-29",
+      "time_et": "22:26",
+      "season": "2025-26",
+      "teams": [
+        "SAS",
+        "OKC"
+      ],
+      "category": "injury_rival_star",
+      "headline": "Thunder rule out Jalen Williams and Ajay Mitchell for WCF Game 7",
+      "detail": "Announced the night before Game 7 (time = NBA.com article timestamp). Clean rival-injury news shock for SAS (and NYK's prospective opponent).",
+      "source_url": "https://www.nba.com/news/thunder-guard-jalen-williams-hamstring-out-of-game-7-of-west-finals"
+    },
+    {
+      "date": "2026-05-30",
+      "time_et": "20:00",
+      "season": "2025-26",
+      "teams": [
+        "SAS",
+        "OKC"
+      ],
+      "category": "series_clinch",
+      "headline": "Spurs beat defending-champion Thunder 111-103 in Game 7 at OKC",
+      "detail": "First Finals berth since 2014; guarantees an 8th straight different champion.",
+      "source_url": "https://www.ksat.com/sports/2026/05/30/wembanyama-spurs-win-the-west-topple-thunder-111-103-in-game-7-to-head-to-nba-finals/"
+    },
+    {
+      "date": "2026-06-03",
+      "time_et": "20:30",
+      "season": "2025-26",
+      "teams": [
+        "NYK",
+        "SAS"
+      ],
+      "category": "game_result",
+      "headline": "Finals Game 1: Knicks win 105-95 in San Antonio",
+      "detail": "Knicks' 12th straight playoff win.",
+      "source_url": "https://www.nba.com/game/nyk-vs-sas-0042500401"
+    },
+    {
+      "date": "2026-06-05",
+      "time_et": "20:30",
+      "season": "2025-26",
+      "teams": [
+        "NYK",
+        "SAS"
+      ],
+      "category": "game_result",
+      "headline": "Finals Game 2: Knicks win 105-104; lead 2-0",
+      "detail": "Wembanyama missed at the end.",
+      "source_url": "https://www.espn.com/nba/recap?gameId=401859964"
+    },
+    {
+      "date": "2026-06-08",
+      "time_et": "20:30",
+      "season": "2025-26",
+      "teams": [
+        "SAS",
+        "NYK"
+      ],
+      "category": "game_result",
+      "headline": "Finals Game 3: Spurs win 115-111 at MSG",
+      "detail": "Ended Knicks' 13-game playoff win streak; President Trump attended (first sitting president at a Finals game).",
+      "source_url": "https://www.nba.com/game/sas-vs-nyk-0042500403"
+    },
+    {
+      "date": "2026-06-10",
+      "time_et": "20:30",
+      "season": "2025-26",
+      "teams": [
+        "NYK",
+        "SAS"
+      ],
+      "category": "game_result",
+      "headline": "Finals Game 4: Knicks overcome 29-point deficit, win 107-106 on Anunoby tip-in (1.2s)",
+      "detail": "Largest comeback in NBA Finals history; NYK lead 3-1.",
+      "source_url": "https://www.cbssports.com/nba/news/knicks-spurs-score-live-updates-nba-finals-game-4/live/"
+    },
+    {
+      "date": "2026-06-13",
+      "time_et": "20:30",
+      "season": "2025-26",
+      "teams": [
+        "NYK",
+        "SAS"
+      ],
+      "category": "series_clinch",
+      "headline": "Knicks win 2026 NBA championship, beat Spurs 94-90 in Game 5 (series 4-1)",
+      "detail": "First title since 1973; Brunson Finals MVP (45 pts in clincher, 32.6 ppg in series). Game in San Antonio.",
+      "source_url": "https://www.nba.com/news/how-the-knicks-won-the-2026-nba-championship"
+    },
+    {
+      "date": "2026-06-18",
+      "time_et": "10:00",
+      "season": "2025-26",
+      "teams": [
+        "NYK"
+      ],
+      "category": "other",
+      "headline": "Knicks championship parade up Broadway's Canyon of Heroes; Key to the City ceremony",
+      "detail": "Battery Park to City Hall, 10 a.m. ET Thursday June 18, 2026.",
+      "source_url": "https://www.fox5ny.com/news/knicks-championship-parade-set-thursday-nycs-canyon-heroes"
+    },
+    {
+      "date": "2026-06-22",
+      "time_et": "23:52",
+      "season": "2025-26",
+      "teams": [
+        "MIL",
+        "MIA"
+      ],
+      "category": "trade",
+      "headline": "Bucks agree to trade Giannis Antetokounmpo to Heat",
+      "detail": "Post-Finals move affecting 2026-27 odds (time = ESPN story timestamp). MIL get Herro, Ware, Jaquez, Jakucionis, three 1sts.",
+      "source_url": "https://www.espn.com/nba/story/_/id/49149967/bucks-trading-giannis-antetokounmpo-bobby-portis-heat-tyler-herro-kelel-ware-jaime-jaquez-jr-kasparas-jakucionis-picks"
+    }
+  ],
+  "commerce_impacts": [
+    {
+      "date": "2025-02-04",
+      "event_ref": "Doncic-to-Lakers trade (2025-02-02)",
+      "teams": [
+        "DAL"
+      ],
+      "sector": "tickets",
+      "metric": "Mavericks season-ticket cancellation/refund requests after trade",
+      "value": "Team said reps were taking calls and refunded at least one holder; no count disclosed (qualitative)",
+      "lag_days_from_event": 2,
+      "source_url": "https://www.nbcsandiego.com/nba/mavericks-refunds-luka-doncic-trade-fans/3744530/"
+    },
+    {
+      "date": "2025-02-05",
+      "event_ref": "Doncic-to-Lakers trade (2025-02-02)",
+      "teams": [
+        "LAL"
+      ],
+      "sector": "tickets",
+      "metric": "Average resale ticket price, all Lakers home and away games, since the trade (Sports Business Journal via Yahoo Sports)",
+      "value": "+19% within ~3 days of the trade",
+      "lag_days_from_event": 3,
+      "source_url": "https://www.kiro7.com/news/national/business-luka-how/ZYBTAZDNRGLIG4VFG7KYXWNFLA"
+    },
+    {
+      "date": "2025-02-05",
+      "event_ref": "Doncic-to-Lakers trade (2025-02-02)",
+      "teams": [
+        "LAL",
+        "DAL"
+      ],
+      "sector": "tickets",
+      "metric": "Resale price for Feb 25 Lakers vs. Mavericks game (Vivid Seats via Yahoo Sports)",
+      "value": "+111%; get-in approaching $300",
+      "lag_days_from_event": 3,
+      "source_url": "https://www.kiro7.com/news/national/business-luka-how/ZYBTAZDNRGLIG4VFG7KYXWNFLA"
+    },
+    {
+      "date": "2025-02-05",
+      "event_ref": "Doncic-to-Lakers trade (2025-02-02)",
+      "teams": [
+        "LAL"
+      ],
+      "sector": "merch",
+      "metric": "Fanatics stock of Doncic Lakers gold jersey ($80)",
+      "value": "Sold out (no unit figures disclosed)",
+      "lag_days_from_event": 3,
+      "source_url": "https://www.kiro7.com/news/national/business-luka-how/ZYBTAZDNRGLIG4VFG7KYXWNFLA"
+    },
+    {
+      "date": "2025-02-05",
+      "event_ref": "Doncic-to-Lakers trade (2025-02-02)",
+      "teams": [
+        "LAL"
+      ],
+      "sector": "merch",
+      "metric": "eBay searches for 'Luka Doncic' vs prior 7 days (The Athletic, via Yahoo Sports)",
+      "value": "+1,150%; 80+ searches per minute",
+      "lag_days_from_event": 3,
+      "source_url": "https://www.kiro7.com/news/national/business-luka-how/ZYBTAZDNRGLIG4VFG7KYXWNFLA"
+    },
+    {
+      "date": "2025-02-14",
+      "event_ref": "Doncic-to-Lakers trade (2025-02-02) / Lakers debut 2025-02-10",
+      "teams": [
+        "LAL"
+      ],
+      "sector": "tickets",
+      "metric": "Cheapest Lakers home ticket, pre-trade vs Doncic debut (TickPick figures, SECOND-HAND via ESPN Deportes)",
+      "value": "$43 pre-trade vs $193 for Feb 10 debut (~4.5x; outlets called it '500%')",
+      "lag_days_from_event": 12,
+      "source_url": "https://espndeportes.espn.com/basquetbol/nba/nota/_/id/14794853/nba-lakers-luka-doncic-all-star-game-kevin-durant"
+    },
+    {
+      "date": "2025-02-21",
+      "event_ref": "Doncic-to-Lakers trade (2025-02-02)",
+      "teams": [
+        "LAL"
+      ],
+      "sector": "tickets",
+      "metric": "StubHub ticket sales for Lakers games vs the day before the trade (CBS)",
+      "value": "+26%+",
+      "lag_days_from_event": 19,
+      "source_url": "https://www.cbsnews.com/amp/losangeles/news/how-much-are-dallas-mavericks-tickets-luka-doncic-trade"
+    },
+    {
+      "date": "2025-02-21",
+      "event_ref": "Doncic-to-Lakers trade (2025-02-02)",
+      "teams": [
+        "DAL",
+        "LAL"
+      ],
+      "sector": "tickets",
+      "metric": "Average listed price for Apr 9 Mavericks vs. Lakers (Doncic return to Dallas) (Vivid Seats via CBS)",
+      "value": "+44%",
+      "lag_days_from_event": 19,
+      "source_url": "https://www.cbsnews.com/amp/losangeles/news/how-much-are-dallas-mavericks-tickets-luka-doncic-trade"
+    },
+    {
+      "date": "2025-02-25",
+      "event_ref": "Doncic-to-Lakers trade (2025-02-02)",
+      "teams": [
+        "LAL",
+        "DAL"
+      ],
+      "sector": "tickets",
+      "metric": "StubHub/Vivid Seats demand for Feb 25 Lakers-Mavericks game",
+      "value": "StubHub sales 2.5x in the 24 hours after the trade; avg sold price $436 (+15% since trade); game moved from Lakers' #29 to #3 best-selling home game; Vivid Seats traffic +941% after trade",
+      "lag_days_from_event": 23,
+      "source_url": "https://www.nbclosangeles.com/news/sports/lakers-mavs-ticket-demand-for-luka-doncic/3640000/"
+    },
+    {
+      "date": "2025-02-26",
+      "event_ref": "Doncic-to-Lakers trade (2025-02-02)",
+      "teams": [
+        "DAL",
+        "LAL"
+      ],
+      "sector": "tickets",
+      "metric": "UNVERIFIED: average resale purchase price, Mavs vs Lakers home games before/after trade (figures from an X account; marketplace not named)",
+      "value": "DAL -40% ($187 -> $112); LAL +19% ($253 -> $303)",
+      "lag_days_from_event": 24,
+      "source_url": "https://fadeawayworld.net/nba/dallas-mavericks/mavericks-ticket-prices-40-luka-doncic-got-traded"
+    },
+    {
+      "date": "2025-02-28",
+      "event_ref": "Wembanyama out for season (DVT) 2025-02-20",
+      "teams": [
+        "SAS"
+      ],
+      "sector": "tickets",
+      "metric": "StubHub get-in for Mar 4 Spurs vs Nets (single snapshot, no pre-injury baseline)",
+      "value": "$2 ($8 after fees)",
+      "lag_days_from_event": 8,
+      "source_url": "https://www.sacurrent.com/arts/san-antonio-spurs-tickets-going-for-as-little-as-2-as-team-struggles-with-health-problems-36872564/"
+    },
+    {
+      "date": "2025-03-03",
+      "event_ref": "Doncic-to-Lakers trade (2025-02-02)",
+      "teams": [
+        "DAL"
+      ],
+      "sector": "tickets",
+      "metric": "Mavericks 2025-26 season-ticket renewal price change (FOS citing WFAA)",
+      "value": "+8.61% average; premium seats >10% (pricing decision, not demand)",
+      "lag_days_from_event": 29,
+      "source_url": "https://frontofficesports.com/?p=171692"
+    },
+    {
+      "date": "2025-04-07",
+      "event_ref": "Doncic-to-Lakers trade (2025-02-02) / Doncic return game 2025-04-09",
+      "teams": [
+        "DAL",
+        "LAL"
+      ],
+      "sector": "tickets",
+      "metric": "Resale prices for Doncic's first game back in Dallas (CBS Texas)",
+      "value": "Vivid Seats avg sale $408; SeatGeek courtside $27,363/ticket; vs $45 face-value seats for DAL-TOR two days later",
+      "lag_days_from_event": 64,
+      "source_url": "https://www.cbsnews.com/amp/texas/news/mavericks-lakers-game-luka-doncic-ticket-prices"
+    },
+    {
+      "date": "2025-04-14",
+      "event_ref": "Doncic-to-Lakers trade (2025-02-02)",
+      "teams": [
+        "LAL",
+        "DAL"
+      ],
+      "sector": "merch",
+      "metric": "NBA/NBPA 2024-25 season jersey & team merch rankings (NBAStore.com sales)",
+      "value": "Doncic #1 jersey (was #8 on Jan 24 midseason list, pre-trade); first international player to lead; Lakers #1 team merch; Anthony Davis not in top 15",
+      "lag_days_from_event": 71,
+      "source_url": "https://pr.nba.com/2024-25-season-social-media-merchandise"
+    },
+    {
+      "date": "2025-05-08",
+      "event_ref": "Knicks take 2-0 lead at Boston (2025-05-07)",
+      "teams": [
+        "NYK",
+        "BOS"
+      ],
+      "sector": "tickets",
+      "metric": "MSG resale get-in for East semis Game 3; price change for Games 4/6 since series start (FOS)",
+      "value": "Game 3 get-in ~$700 before fees (~$1,000 after); Games 4 and 6 up ~50% in three days",
+      "lag_days_from_event": 1,
+      "source_url": "https://frontofficesports.com/newsletter/knicks-tickets-at-super-bowl-rates/"
+    },
+    {
+      "date": "2025-05-08",
+      "event_ref": "Knicks take 2-0 lead at Boston (2025-05-07)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "tickets",
+      "metric": "Cheapest Game 3 ticket at MSG (ABC7NY)",
+      "value": "$626 StubHub / $795 TickPick; TickPick called earlier $706 get-in 'the most expensive Knicks ticket on record'",
+      "lag_days_from_event": 1,
+      "source_url": "https://abc7ny.com/16359094/"
+    },
+    {
+      "date": "2025-05-18",
+      "event_ref": "Mavericks win draft lottery (1.8% odds) 2025-05-12",
+      "teams": [
+        "DAL"
+      ],
+      "sector": "tickets",
+      "metric": "Ticket/sponsor inquiries after lottery (Rick Welts via Dallas Morning News)",
+      "value": "Staff 'inundated with ticket and corporate sponsor-related requests in the first 24 hours' (qualitative)",
+      "lag_days_from_event": 6,
+      "source_url": "https://www.si.com/nba/mavericks/news/dallas-mavericks-lottery-luck-results-massive-ticket-corporate-sponsorship-requests-cooper-flagg"
+    },
+    {
+      "date": "2025-05-21",
+      "event_ref": "Knicks eliminate Celtics (2025-05-16; Tatum Achilles 2025-05-12)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "merch",
+      "metric": "Fanatics Knicks product sales vs last season's playoffs (Bloomberg)",
+      "value": "+80%",
+      "lag_days_from_event": 5,
+      "source_url": "https://www.fanaticsinc.com/news/bloomberg-new-york-knicks-merchandise-sales-skyrocket-in-nba-playoff-run"
+    },
+    {
+      "date": "2025-05-22",
+      "event_ref": "Knicks eliminate Celtics, reach ECF (2025-05-16)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "city_economy",
+      "metric": "NYCEDC estimate of Knicks playoff economic activity",
+      "value": "$195M from home games so far; $91M per ECF home game; up to $832M for a full run",
+      "lag_days_from_event": 6,
+      "source_url": "https://www.nyc.gov/mayors-office/news/2025/05/mayor-adams-full-new-york-knicks-postseason-has-potential-generate-832-million-in"
+    },
+    {
+      "date": "2025-05-23",
+      "event_ref": "Knicks eliminate Celtics (2025-05-16)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "merch",
+      "metric": "Fanatics jersey/team sales rank since May 5 (start of BOS series)",
+      "value": "Brunson best-selling jersey across ALL sports since May 5; Knicks NBA's top-selling team",
+      "lag_days_from_event": 7,
+      "source_url": "https://www.si.com/nba/knicks/news/new-york-knicks-jalen-brunson-becoming-biggest-name-sports"
+    },
+    {
+      "date": "2025-05-25",
+      "event_ref": "Pacers take 2-0 ECF lead at MSG (2025-05-23)",
+      "teams": [
+        "IND"
+      ],
+      "sector": "tickets",
+      "metric": "Cheapest Ticketmaster seats for ECF Games 3-4 in Indianapolis (SI, as of May 24)",
+      "value": "Game 3 $285.80; Game 4 $310.80",
+      "lag_days_from_event": 2,
+      "source_url": "https://www.si.com/nba/nba-conference-finals-ticket-prices-cheapest-most-expensive-seats"
+    },
+    {
+      "date": "2025-05-28",
+      "event_ref": "Thunder clinch West (2025-05-28)",
+      "teams": [
+        "OKC"
+      ],
+      "sector": "merch",
+      "metric": "Retail response to West title",
+      "value": "Four DICK'S stores in OKC/Tulsa reopened the same night to sell conference-champion gear (no sales figures)",
+      "lag_days_from_event": 0,
+      "source_url": "https://www.okcfox.com/news/local/dicks-sporting-goods-reopens-in-okc-and-tulsa-after-thunders-victory"
+    },
+    {
+      "date": "2025-05-30",
+      "event_ref": "Pacers take 3-1 ECF lead (2025-05-27)",
+      "teams": [
+        "IND"
+      ],
+      "sector": "merch",
+      "metric": "Local retailer Pacers gear sell-through (WRTV)",
+      "value": "Retailers 'selling out of gear in just a matter of hours after it hits the shelves' (qualitative)",
+      "lag_days_from_event": 3,
+      "source_url": "https://www.wrtv.com/sports/pacers/pacers-playoff-run-sparks-boom-in-team-merch"
+    },
+    {
+      "date": "2025-05-30",
+      "event_ref": "Knicks win ECF Game 5 to trail 3-2 (2025-05-29)",
+      "teams": [
+        "NYK",
+        "IND"
+      ],
+      "sector": "tickets",
+      "metric": "TickPick ECF prices at MSG and Indianapolis",
+      "value": "MSG avg purchase G1 $1,041 / G2 $971 / G5 $1,012; potential G7 at MSG avg $1,565, get-in $1,099 ('most expensive ECF game on record'), 411% above $215 G6 get-in in Indianapolis",
+      "lag_days_from_event": 1,
+      "source_url": "https://frontofficesports.com/?p=186143"
+    },
+    {
+      "date": "2025-06-02",
+      "event_ref": "Pacers clinch East (2025-05-31)",
+      "teams": [
+        "IND"
+      ],
+      "sector": "city_economy",
+      "metric": "Average visitor spending per NBA Finals game ('recent studies' cited by WRTV)",
+      "value": "~$6M per game",
+      "lag_days_from_event": 2,
+      "source_url": "https://www.wrtv.com/sports/2025-nba-finals/pacers-make-history-what-the-nba-finals-mean-for-indianapolis-economy"
+    },
+    {
+      "date": "2025-06-03",
+      "event_ref": "Finals matchup set: Pacers clinch East (2025-05-31)",
+      "teams": [
+        "OKC",
+        "IND"
+      ],
+      "sector": "tickets",
+      "metric": "TickPick 2025 Finals average purchase price and Games 1-4 avg/get-in",
+      "value": "Finals avg $1,147 (-25% vs 2024's $1,560); G1 OKC $1,012/$525; G2 OKC $1,201/$602; G3 IND $1,002/$755; G4 IND $1,093/$832 — 'most expensive on record for NBA games in OKC and Indianapolis'",
+      "lag_days_from_event": 3,
+      "source_url": "https://www.frontofficesports.com/nba-finals-ticket-prices-down-25-still-average-over-1000/"
+    },
+    {
+      "date": "2025-06-12",
+      "event_ref": "Finals Game 3 (2025-06-11)",
+      "teams": [
+        "OKC"
+      ],
+      "sector": "restaurant_bar",
+      "metric": "Thunder Hall/Fassler Hall (OKC) business during Finals (News 9)",
+      "value": "'increase of like 50% in business'; food, beer and liquor orders up 'double, triple'",
+      "lag_days_from_event": 1,
+      "source_url": "https://www.news9.com/story/684b509b42a0f0082cab01c2/thunder-hall-still-going-strong-for-nba-finals"
+    },
+    {
+      "date": "2025-06-12",
+      "event_ref": "Finals Game 3 in Indianapolis (2025-06-11)",
+      "teams": [
+        "IND"
+      ],
+      "sector": "restaurant_bar",
+      "metric": "Tom's Watch Bar (Indianapolis) sales during Pacers games (FOS)",
+      "value": "Sales roughly doubled during Pacers games (base period unclear)",
+      "lag_days_from_event": 1,
+      "source_url": "https://frontofficesports.com/?p=188052"
+    },
+    {
+      "date": "2025-06-13",
+      "event_ref": "Finals Game 3 in Indianapolis (2025-06-11)",
+      "teams": [
+        "IND"
+      ],
+      "sector": "restaurant_bar",
+      "metric": "Ale Emporium (Fishers) sales during Pacers watch parties (IBJ)",
+      "value": "+30-40%; ~$10,000 more than a normal Wednesday on Finals Game 3 night",
+      "lag_days_from_event": 2,
+      "source_url": "https://www.ibj.com/articles/hamilton-county-bars-restaurants-get-a-boost-as-fans-flock-to-pacers-watch-parties"
+    },
+    {
+      "date": "2025-06-16",
+      "event_ref": "Pacers clinch East (2025-05-31)",
+      "teams": [
+        "IND"
+      ],
+      "sector": "merch",
+      "metric": "Pacers Team Store online orders (IBJ)",
+      "value": "~1,000 online orders per day from 43+ states; 'set records almost every single game'",
+      "lag_days_from_event": 16,
+      "source_url": "https://www.ibj.com/articles/pacers-see-overwhelming-merchandise-demand-amid-playoffs-nba-finals-run"
+    },
+    {
+      "date": "2025-06-17",
+      "event_ref": "Thunder win Finals Game 5, lead 3-2 (2025-06-16)",
+      "teams": [
+        "IND"
+      ],
+      "sector": "tickets",
+      "metric": "Cheapest Ticketmaster single ticket, Finals Game 6 in Indianapolis (SI)",
+      "value": "$466",
+      "lag_days_from_event": 1,
+      "source_url": "https://www.si.com/nba/nba-finals-ticket-prices-game-6-how-much-to-get-into-elimination-game-pacers-thunder-gainbridge-fieldhouse-indiana"
+    },
+    {
+      "date": "2025-06-20",
+      "event_ref": "Thunder sweep Grizzlies (2025-04-26)",
+      "teams": [
+        "OKC"
+      ],
+      "sector": "hotel",
+      "metric": "OKC hotel search volume vs prior 22-month average; Finals-week rates (Lighthouse)",
+      "value": "Search +45% over playoffs; daily peak observed 2025-04-27 (1 day after the sweep); Finals G1-2 week rates highest in 5 years but only marginally/nominally",
+      "lag_days_from_event": 55,
+      "source_url": "https://www.hospitalitynet.org/news/4127789/nba-finals-2025-how-forward-looking-search-data-reveals-the-winning-playbook-for-hotels"
+    },
+    {
+      "date": "2025-06-20",
+      "event_ref": "Pacers clinch East (2025-05-31)",
+      "teams": [
+        "IND"
+      ],
+      "sector": "hotel",
+      "metric": "Indianapolis hotel search volume and Finals Game 4 night rate (Lighthouse)",
+      "value": "Search +29%, 24-month high just before Finals; G4 night (Jun 13) avg rate $179, only +2% vs 30 days prior",
+      "lag_days_from_event": 20,
+      "source_url": "https://www.hospitalitynet.org/news/4127789/nba-finals-2025-how-forward-looking-search-data-reveals-the-winning-playbook-for-hotels"
+    },
+    {
+      "date": "2025-06-22",
+      "event_ref": "Pacers win Game 6 to force Game 7 (2025-06-19)",
+      "teams": [
+        "OKC"
+      ],
+      "sector": "tickets",
+      "metric": "Cheapest Ticketmaster single ticket, Finals Game 7 in OKC (as of noon ET Jun 22)",
+      "value": "$1,215 (vs $546.75 Game 1 minimum on Jun 4; ~2.2x)",
+      "lag_days_from_event": 3,
+      "source_url": "https://www.si.com/nba/nba-finals-game-7-pacers-thunder-ticket-prices"
+    },
+    {
+      "date": "2025-06-23",
+      "event_ref": "Pacers' Finals run ends in Game 7 (2025-06-22)",
+      "teams": [
+        "IND"
+      ],
+      "sector": "hotel",
+      "metric": "Indianapolis hotel rates during Pacers home playoff games (Visit Indy)",
+      "value": "+34%",
+      "lag_days_from_event": 1,
+      "source_url": "https://www.ibj.com/articles/pacers-run-to-nba-finals-bumped-downtown-foot-traffic-visitors"
+    },
+    {
+      "date": "2025-06-23",
+      "event_ref": "Pacers' Finals run ends in Game 7 (2025-06-22)",
+      "teams": [
+        "IND"
+      ],
+      "sector": "city_economy",
+      "metric": "Visit Indy tally of Pacers playoff run",
+      "value": "~$20M economic impact for central Indiana; downtown foot traffic +14%; ~282,000 stories / ~$6B media value; $250K+ watch-party proceeds",
+      "lag_days_from_event": 1,
+      "source_url": "https://www.ibj.com/articles/pacers-run-to-nba-finals-bumped-downtown-foot-traffic-visitors"
+    },
+    {
+      "date": "2025-06-24",
+      "event_ref": "Mavericks win draft lottery (1.8% odds) 2025-05-12",
+      "teams": [
+        "DAL"
+      ],
+      "sector": "tickets",
+      "metric": "New season-ticket sales after lottery (unnamed Mavericks team source, ESPN)",
+      "value": "'$8 million in new season tickets in the three days after the lottery'; 75-80% renewal rate (other reports cite $7M from a Welts talk; unverified)",
+      "lag_days_from_event": 43,
+      "source_url": "https://www.espn.com/nba/story/_/id/45570427"
+    },
+    {
+      "date": "2025-07-15",
+      "event_ref": "Durant trade to Rockets official 2025-07-06 (agreed 2025-06-22)",
+      "teams": [
+        "HOU"
+      ],
+      "sector": "merch",
+      "metric": "Fanatics network jersey sales rank, Jul 7-15 2025 (Rockets Wire/Yahoo, reposted by Fanatics)",
+      "value": "Durant #7 Rockets jersey = #1 NBA jersey since the trade became official",
+      "lag_days_from_event": 9,
+      "source_url": "https://fanaticsinc.com/news/yahoo-sports-kevin-durants-new-rockets-jersey-leads-recent-nba-sales-at-fanatics"
+    },
+    {
+      "date": "2025-07-15",
+      "event_ref": "Mavericks draft Cooper Flagg No. 1 (2025-06-25)",
+      "teams": [
+        "DAL"
+      ],
+      "sector": "merch",
+      "metric": "Fanatics network jersey sales rank, Jul 7-15 2025",
+      "value": "Flagg #3 (behind Durant, Curry; ahead of SGA, Doncic)",
+      "lag_days_from_event": 20,
+      "source_url": "https://fanaticsinc.com/news/yahoo-sports-kevin-durants-new-rockets-jersey-leads-recent-nba-sales-at-fanatics"
+    },
+    {
+      "date": "2026-04-14",
+      "event_ref": "Knicks win NBA Cup (2025-12-16) / regular season end",
+      "teams": [
+        "NYK",
+        "SAS",
+        "DAL"
+      ],
+      "sector": "merch",
+      "metric": "NBA/NBPA 2025-26 regular-season merch rankings (NBAStore.com, Fanatics.com)",
+      "value": "Knicks #1 team merch; jerseys: Brunson #3, Wembanyama #4, Tatum #7, SGA #8, Flagg #9 (Curry #1, Doncic #2)",
+      "lag_days_from_event": 119,
+      "source_url": "https://www.eurohoops.net/en/nba-news/1955804/luka-doncic-victor-wembanyama-nikola-jokic-jersey-sales-nba/"
+    },
+    {
+      "date": "2026-05-18",
+      "event_ref": "Knicks sweep 76ers (2026-05-10)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "tickets",
+      "metric": "Resale get-in for potential Finals games and ECF games at MSG (FOS)",
+      "value": "Potential Finals at MSG ~$2,500; ECF at MSG ~$500",
+      "lag_days_from_event": 8,
+      "source_url": "https://frontofficesports.com/article/knicks-ticket-demand-sees-msg-get-in-prices-soar/"
+    },
+    {
+      "date": "2026-05-19",
+      "event_ref": "Knicks sweep 76ers (2026-05-10)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "city_economy",
+      "metric": "SECOND-HAND: Seaport Research estimate of MSG Sports gross revenue from run",
+      "value": ">$140M; ~$17M per ECF home game, >$20M per Finals home game",
+      "lag_days_from_event": 9,
+      "source_url": "https://cultureofsport.substack.com/p/the-knicks-playoff-run-is-turning"
+    },
+    {
+      "date": "2026-05-24",
+      "event_ref": "Knicks take 3-0 ECF lead (2026-05-23)",
+      "teams": [
+        "NYK",
+        "OKC"
+      ],
+      "sector": "tickets",
+      "metric": "StubHub Finals prices before matchup was set (Fox News)",
+      "value": "Courtside pair for Finals G3 at MSG sold for $279,804; cheapest MSG Finals ticket $3,554 vs cheapest OKC $1,252",
+      "lag_days_from_event": 1,
+      "source_url": "https://www.foxnews.com/sports/knicks-fans-already-paying-nearly-280k-courtside-nba-finals-tickets-team-nears-historic-berth"
+    },
+    {
+      "date": "2026-05-26",
+      "event_ref": "Knicks sweep Cavs, reach Finals (2026-05-25)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "tickets",
+      "metric": "StubHub/SeatGeek MSG Finals listings (NBC)",
+      "value": "Upper level ~$3,200 for G3/G4, $4,800 for G6; G6 courtside listing $121,699",
+      "lag_days_from_event": 1,
+      "source_url": "https://www.nbcconnecticut.com/nba/how-much-are-knicks-nba-finals-tickets-selling-for/"
+    },
+    {
+      "date": "2026-05-29",
+      "event_ref": "Knicks reach Finals (2026-05-25)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "merch",
+      "metric": "SECOND-HAND (Newsweek citing NY Post): NBA Finals hats at a NYC Dick's Sporting Goods",
+      "value": "300 hats sold out instantly",
+      "lag_days_from_event": 4,
+      "source_url": "https://www.newsweek.com/sports/nba/new-york-knicks-fans-are-literally-crying-over-nba-finals-merchandise-12007168"
+    },
+    {
+      "date": "2026-06-01",
+      "event_ref": "Spurs beat Thunder in WCF Game 7 (2026-05-30)",
+      "teams": [
+        "SAS",
+        "NYK"
+      ],
+      "sector": "tickets",
+      "metric": "Broker quote on Finals get-in, San Antonio vs MSG (Victory Tickets CEO, Fox 7)",
+      "value": "~$1,000 upper-level get-in in San Antonio vs ~$3,000 'worst seat' at MSG",
+      "lag_days_from_event": 2,
+      "source_url": "https://fox7austin.com/news/spurs-vs-knicks-nba-finals-ticket-prices-skyrocket"
+    },
+    {
+      "date": "2026-06-03",
+      "event_ref": "Knicks reach Finals (2026-05-25)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "city_economy",
+      "metric": "NYCEDC estimate of Knicks postseason economic activity",
+      "value": "$202M from 7 home games through ECF; ~$90M per additional home game; up to $465M",
+      "lag_days_from_event": 9,
+      "source_url": "https://www.nyc.gov/mayors-office/news/2026/06/mayor-mamdani-announces-new-york-knicks-postseason-has-generated"
+    },
+    {
+      "date": "2026-06-03",
+      "event_ref": "Finals matchup set (Spurs win West 2026-05-30)",
+      "teams": [
+        "SAS",
+        "NYK"
+      ],
+      "sector": "hotel",
+      "metric": "San Antonio resort sought to cancel a tax conference to house the Knicks (Bloomberg Tax) — qualitative",
+      "value": "Dispute over hotel block; conference proceeded (no rate data)",
+      "lag_days_from_event": 4,
+      "source_url": "https://news.bloombergtax.com/financial-accounting/nba-finals-or-not-san-antonio-tax-conference-carries-on"
+    },
+    {
+      "date": "2026-06-04",
+      "event_ref": "Knicks win Finals Game 1 in San Antonio (2026-06-03)",
+      "teams": [
+        "NYK",
+        "SAS"
+      ],
+      "sector": "tickets",
+      "metric": "MSG Finals get-in prices vs earlier in week (FOS)",
+      "value": "G3 ~$8,200 (from $4,200 three days earlier); G4 ~$8,500 (from $3,900 Mon); G6 ~$9,000 (from $5,300); G2 in San Antonio <$800; $10 MSG watch-party tickets reselling ~$100",
+      "lag_days_from_event": 1,
+      "source_url": "https://frontofficesports.com/knicks-get-in-prices-for-game-3-at-msg-hit-8000-and-climbing/"
+    },
+    {
+      "date": "2026-06-05",
+      "event_ref": "Knicks win Finals Game 1 (2026-06-03)",
+      "teams": [
+        "NYK",
+        "SAS"
+      ],
+      "sector": "travel",
+      "metric": "Knicks fans flying to San Antonio for cheaper Finals tickets (KSAT) — qualitative, no booking data",
+      "value": "Game 2 nosebleeds ~$791 in San Antonio vs multi-thousand MSG get-ins",
+      "lag_days_from_event": 2,
+      "source_url": "https://www.ksat.com/news/local/2026/06/05/priced-out-of-msg-new-york-knicks-fans-fly-to-san-antonio-for-a-cheaper-nba-finals-experience/"
+    },
+    {
+      "date": "2026-06-06",
+      "event_ref": "Knicks win Finals Game 2, lead 2-0 (2026-06-05)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "tickets",
+      "metric": "TickPick MSG Finals prices; StubHub demand comparison (Gothamist)",
+      "value": "G3 get-in $10,085 / avg $6,487; G4 get-in $11,814 / avg $7,163 (prior Finals avg record $2,072, 2024 G5); StubHub G3 demand ~4% above Super Bowl LX",
+      "lag_days_from_event": 1,
+      "source_url": "https://gothamist.com/news/the-knicks-have-won-2-straight-and-msg-tickets-now-cost-way-more-than-your-rent"
+    },
+    {
+      "date": "2026-06-07",
+      "event_ref": "Spurs win West (2026-05-30)",
+      "teams": [
+        "SAS"
+      ],
+      "sector": "restaurant_bar",
+      "metric": "San Antonio restaurant/bar demand during Finals run (San Antonio Report)",
+      "value": "Bakwood BBQ demand +500%; Stout House Grayson +50-75% on Spurs nights (other locations +20-40%); Pearl G1 watch party ~1,000 fans",
+      "lag_days_from_event": 8,
+      "source_url": "https://sanantonioreport.org/culture-spurs-finals-run-economic-opportunity-san-antonio/"
+    },
+    {
+      "date": "2026-06-07",
+      "event_ref": "Spurs win West (2026-05-30)",
+      "teams": [
+        "SAS"
+      ],
+      "sector": "merch",
+      "metric": "Spurs merch retail response (San Antonio Report)",
+      "value": "Several Academy stores open until 3 a.m. after WCF Game 7; counterfeit Spurs gear estimated at $13.6M",
+      "lag_days_from_event": 8,
+      "source_url": "https://sanantonioreport.org/culture-spurs-finals-run-economic-opportunity-san-antonio/"
+    },
+    {
+      "date": "2026-06-08",
+      "event_ref": "Presidential attendance at Finals Game 3 (non-basketball shock)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "tickets",
+      "metric": "MSG Finals get-in moves attributed to security for President Trump's attendance (FOS)",
+      "value": "G3 get-in from ~$11,000 (Sat) to <$5,000; G4 from ~$15,000 to ~$9,000; outdoor MSG watch party cancelled",
+      "lag_days_from_event": 0,
+      "source_url": "https://frontofficesports.com/newsletter/knicks-ticket-prices-tumble/"
+    },
+    {
+      "date": "2026-06-09",
+      "event_ref": "Spurs win Finals Game 3, end Knicks' 13-game streak (2026-06-08)",
+      "teams": [
+        "NYK",
+        "SAS"
+      ],
+      "sector": "tickets",
+      "metric": "Finals get-in prices after Game 3 loss (FOS)",
+      "value": "G4 at MSG <$4,800 (vs ~$15,000 Sat, ~$9,600 Mon); G6 ~$12,000; G5 in SA ~$1,700; G7 in SA ~$4,400",
+      "lag_days_from_event": 1,
+      "source_url": "https://frontofficesports.com/ticket-prices-for-game-4-at-msg-drop-following-knicks-loss/"
+    },
+    {
+      "date": "2026-06-10",
+      "event_ref": "Spurs win Finals Game 3 (2026-06-08)",
+      "teams": [
+        "NYK",
+        "SAS"
+      ],
+      "sector": "tickets",
+      "metric": "TicketData get-in prices, 3-day change (Field Level Media)",
+      "value": "G4 $3,898 (-66%; ~$13,500 pre-G3); G5 $1,414 (-24%); G6 $9,262 (-19%); G7 $3,549 (-18%)",
+      "lag_days_from_event": 2,
+      "source_url": "https://fieldlevelmedia.com/nba/nba-finals-ticket-prices-continue-to-plunge-ahead-of-game-4/"
+    },
+    {
+      "date": "2026-06-11",
+      "event_ref": "Knicks' record 29-pt comeback in Game 4, lead 3-1 (2026-06-10)",
+      "teams": [
+        "SAS",
+        "NYK"
+      ],
+      "sector": "tickets",
+      "metric": "Ticketmaster prices for potential clincher Game 5 in San Antonio (KSAT)",
+      "value": "Courtside $31,500-$115,000 (one seat $114,581.25); upper deck >$1,000; dozens of seats still unsold",
+      "lag_days_from_event": 1,
+      "source_url": "https://ksat.com/news/local/2026/06/11/courtside-ticket-priced-at-nearly-115k-for-nba-finals-game-5-at-frost-bank-center/"
+    },
+    {
+      "date": "2026-06-13",
+      "event_ref": "Knicks win title (2026-06-13)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "hotel",
+      "metric": "UNVERIFIED (search snippet only; figures not retrieved): STR U.S. weekly hotel results, week ending Jun 13",
+      "value": "NYC posted the largest ADR and RevPAR gains among top markets, helped by the Finals and a World Cup match",
+      "lag_days_from_event": 0,
+      "source_url": "https://www.costar.com/products/str-benchmark/resources/press-releases/us-hotel-results-week-ending-13-june"
+    },
+    {
+      "date": "2026-06-15",
+      "event_ref": "Knicks win title (2026-06-13)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "merch",
+      "metric": "Fanatics Knicks championship merch sales (Fox Business / The Athletic)",
+      "value": "Top-selling title winner in the 4 major sports within 24 hours (passing 2025 Eagles); 8,000+ orders per minute after the clinch (company record); >2x previous best NBA champion (2020 Lakers); on pace to pass 2016 Cubs",
+      "lag_days_from_event": 2,
+      "source_url": "https://www.foxbusiness.com/sports/knicks-fanatics-championship-gear-flying-off-shelves-record-fashion"
+    },
+    {
+      "date": "2026-06-15",
+      "event_ref": "Knicks win title (2026-06-13)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "merch",
+      "metric": "Prior Fanatics orders-per-minute record (SGB Media)",
+      "value": "Previous record 5,500 orders/min (Eagles, Super Bowl LIX) vs 8,000+ for Knicks",
+      "lag_days_from_event": 2,
+      "source_url": "https://sgbonline.com/fanatics-new-york-knicks-championship-merch-sales-breaks-records/"
+    },
+    {
+      "date": "2026-06-15",
+      "event_ref": "Spurs lose Finals (2026-06-13)",
+      "teams": [
+        "SAS"
+      ],
+      "sector": "tickets",
+      "metric": "Spurs 2026-27 full-season ticket packages (KSAT)",
+      "value": "'already sold out' (half/partial plans still available)",
+      "lag_days_from_event": 2,
+      "source_url": "https://www.ksat.com/news/local/2026/06/15/spurs-season-tickets-selling-fast-as-fans-look-ahead-to-next-season/"
+    },
+    {
+      "date": "2026-06-18",
+      "event_ref": "Knicks title (2026-06-13) / parade 2026-06-18",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "city_economy",
+      "metric": "NYCEDC playoff-run total; parade logistics (Fortune)",
+      "value": "$380M generated during home games; ~$90M per Finals home game; parade cost >$2M; 10,000+ NYPD; 347,000 applications for 600 City Hall ceremony tickets",
+      "lag_days_from_event": 5,
+      "source_url": "https://fortune.com/2026/06/18/knicks-new-york-city-win-parade-economic-development/"
+    },
+    {
+      "date": "2026-06-19",
+      "event_ref": "Spurs Finals run ends (2026-06-13)",
+      "teams": [
+        "SAS"
+      ],
+      "sector": "city_economy",
+      "metric": "Visit San Antonio economic impact of Spurs playoff run (KSAT)",
+      "value": "$36.2M total: R1 $3.5M, R2 $3.5M, WCF $6.8M, Finals $22M (assumed 7 games; series went 5); ticket buyers from 96 countries/territories",
+      "lag_days_from_event": 6,
+      "source_url": "https://www.ksat.com/news/local/2026/06/19/spurs-playoff-run-generated-dollar362m-economic-impact-ticket-buyers-from-around-world/"
+    },
+    {
+      "date": "2026-07-08",
+      "event_ref": "Spurs WCF/Finals run (May 2026)",
+      "teams": [
+        "SAS"
+      ],
+      "sector": "restaurant_bar",
+      "metric": "UNVERIFIED (Axios page 403; search snippet only): May 2026 vs May 2025 alcohol sales at SA bars; AmEx game-day spend",
+      "value": "River North Icehouse +225%; High Horse +158%; AmEx bar/fast-casual spending +46% on game days",
+      "lag_days_from_event": 39,
+      "source_url": "https://www.axios.com/local/san-antonio/2026/07/08/san-antonio-spurs-nba-playoffs-finals-bars-money"
+    },
+    {
+      "date": "2026-08-18",
+      "event_ref": "Knicks Finals run / title (2026-06-13)",
+      "teams": [
+        "NYK"
+      ],
+      "sector": "restaurant_bar",
+      "metric": "Colliers retail review: MSG-area foot traffic (Placer.ai) and bar/restaurant revenue (Sunday App via NY1)",
+      "value": "Visits near MSG more than doubled during the Finals vs same period 2025; >$1,000 incremental revenue per venue on Knicks nights; parade ~2M attendees; NBA Store Fifth Ave lines from 5:30 a.m.",
+      "lag_days_from_event": 66,
+      "source_url": "https://knowledge-leader.colliers.com/nicole-larson/new-york-citys-summer-of-spectacle-how-major-events-fueled-the-citys-retail-economy/"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Tipoff v2 - Three merchants: how much of a news event's opportunity does each kind of merchant capture?",
+  "written_before_results": "2026-10-04 (before scenarios.py was run on any league)",
+  "question": "When a classified prediction-market signal fires at T=0, how much of the profit opportunity in the next 14 days does a merchant capture if they (0) do nothing special, (1) react with gut feel, (2) know the event's class statistics, (3) use Tipoff's quantified signal - versus (4) perfect hindsight?",
+  "event_set": {
+    "include": "every KEPT signal (passed all denoising gates) in every league-season",
+    "data_requirement": "team's merch-search series has >=60% non-zero days in the season window; last-week sales rate R0 >= 1 index point; full window [-7, +13] inside the data",
+    "also_reported": "REJECTED signals, to price what acting on noise would cost"
+  },
+  "decision": {
+    "time": "T=0 = the hour the signal is emitted; day 0 = that ET calendar day",
+    "commitment": "one order at T=0 covering days 0..13 (H=14), delivered instantly (execution latency ignored, per brief), no re-orders inside the window",
+    "why_a_commitment": "if stock could be refilled instantly every day, no forecast would ever matter and all merchants would tie; the commitment is what makes the size of the decision matter"
+  },
+  "demand": {
+    "proxy": "Google Trends daily merch-search index for the team (stitched regular-season pull), treated as proportional to unit sales",
+    "R0": "mean index over days -7..-1 (the merchant's last-week sales rate)",
+    "X": "sum of index over days 0..13 divided by R0 (demand in 'days of last week's sales')",
+    "y": "log(X / 14)"
+  },
+  "merchants": {
+    "M0_business_as_usual": "orders 14 days at last week's rate times its usual buffer: Q = 14*exp(mu_all + z*sd_all), mu/sd of y over ALL team-days in training data (the best possible event-blind buffer)",
+    "M1_smart_gut_feel": "knows the headline category only: good news / bad news (team still alive) / eliminated / won the title. Q = 14*exp(mu_cat + z*sd_cat) from training events",
+    "M2_pro_class_stats": "strict benchmark: knows our full event class (clinch, win, loss, rival game, news...) and its historical average; classes with <5 training events fall back to the category. Q = 14*exp(mu_class + z*sd_class)",
+    "M3_tipoff": "class + the market's quantification: OLS on training events, y ~ class effects + b*dlogit (size of the odds move) + c*logit(odds after the move); Q = 14*exp(yhat + z*sd_resid)",
+    "M4_hindsight": "orders exactly the demand that arrived (upper bound)"
+  },
+  "economics_default": {"retail": 30, "unit_cost": 12, "salvage_pct_of_cost": 30,
+                        "underage_cost": "retail - cost = 18", "overage_cost": "cost*(1-salvage) = 8.4", "critical_ratio": 0.682},
+  "profit": "per event, in units of last-week daily sales: cu*min(Q,X) - co*max(Q-X,0); dollars = that * store's daily units",
+  "training": {
+    "primary": "within league, leave-one-season-out (train on the league's other season, test on this one)",
+    "secondary": "pooled: train on every other league-season, test on this one"
+  },
+  "metrics": {
+    "primary": "opportunity captured = sum(profit_M - profit_M0) / sum(profit_M4 - profit_M0) over events",
+    "secondary": ["units sold vs M0 (the brief's 'sales +x%')", "share of events where M3 >= M1", "profit per event in $ for a 20-units/day store"]
+  },
+  "hypotheses": {
+    "H1": "M3 (Tipoff) captures more opportunity than M1 (gut feel)",
+    "H2_strict": "M3 captures more opportunity than M2 (class statistics without the market's magnitude)"
+  },
+  "inference": {
+    "bootstrap": "2,000 resamples clustered by team-season (overlapping windows of one team are dependent); one-sided p = share of resamples where the difference <= 0",
+    "placebo": "500 runs of M3 with the odds-move size shuffled among events of the same class; if M3's edge comes from the market's magnitude it must collapse",
+    "noise": "apply M3's sizing to REJECTED moves and compare with M0"
+  },
+  "robustness_reported_not_primary": ["H=7 and H=21", "critical ratio 0.5 and 0.8", "pooled training"]
+}

@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "generated": "2026-10-04",
+    "method": "WebSearch budget was exhausted, so labels come from primary sources fetched directly: official NBA injury-report PDFs (ak-static.cms.nba.com, ET timestamps, 15-60 min cadence), ESPN news feed by date (now.core.api.espn.com), ESPN game summaries (tip/end wallclock), Wikipedia wikitext. 'unexplained' means none of those showed relevant news in the ~12h before onset.",
+    "notes": "25-IND-062116 and 25-OKC-062114 are the same event seen from both sides (they mirror each other at the same hour). The sid '26-OKC-061816-check' is kept as given, but it refers to the NYK 13.75->16.15 move on 2026-05-18/19 UTC."
+  },
+  "labels": [
+    {
+      "sid": "25-BOS-111013",
+      "category": "unexplained",
+      "headline": "No Celtics or rival news found (Celtics idle day)",
+      "detail": "BOS was idle on Nov 9; its last game, a 108-104 OT win vs BKN, ended ~03:30Z Nov 9. Jaylen Brown (hip flexor) was first upgraded to questionable in the 5:00 PM ET report (22:00Z), 5h AFTER onset, and his return was confirmed Nov 10 ~19:00Z. No other BOS or contender news turned up in the ESPN feed or injury reports.",
+      "news_time_utc": null,
+      "lag_hours_news_to_onset": null,
+      "confidence": "low",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2024-11-09_05PM.pdf"
+    },
+    {
+      "sid": "25-BOS-111617",
+      "category": "unexplained",
+      "headline": "Weak candidate only: Jrue Holiday added as questionable (knee) for Nov 16",
+      "detail": "Jrue Holiday first appeared as QUESTIONABLE (left knee tendinopathy) in the 11/15 5:30 PM ET injury report (22:30Z), 11.5h before onset; he then sat out the Nov 16 game vs TOR. A regular-season questionable tag is too small to explain a 4-pt title move. The only other overnight event was CLE going 14-0 (game ended ~03:00Z Nov 16). Most likely thin-book drift.",
+      "news_time_utc": null,
+      "lag_hours_news_to_onset": null,
+      "confidence": "low",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2024-11-15_05PM.pdf"
+    },
+    {
+      "sid": "25-CLE-010116",
+      "category": "unexplained",
+      "headline": "No Cavaliers news found before CLE@LAL",
+      "detail": "CLE had no injury-report entries and no ESPN news on Dec 30-31. Nearby events: CLE beat GSW 113-95 (ended ~05:30Z Dec 31), and Porzingis was moved to OUT for BOS-TOR in the 2 PM ET report (19:00Z). Neither is credible for a +3.25-pt title move. CLE's next tip was 02:00Z Jan 1.",
+      "news_time_utc": null,
+      "lag_hours_news_to_onset": null,
+      "confidence": "low",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2024-12-31_02PM.pdf"
+    },
+    {
+      "sid": "25-CLE-051008",
+      "category": "return_from_injury",
+      "headline": "Garland, Mobley, Hunter take part in Game 3 shootaround, trending toward playing",
+      "detail": "All three had been QUESTIONABLE since the 5 PM ET May 8 report. Per ESPN, they 'participated in shootaround earlier in the day' on May 9 (late morning ET, which lines up with the 15:00Z onset). The official upgrade to AVAILABLE came in the 7 PM ET report (23:00Z), and CLE won Game 3 126-104. The exact time of the shootaround reports is approximate.",
+      "news_time_utc": "2025-05-09T15:00Z",
+      "lag_hours_news_to_onset": 0.0,
+      "confidence": "medium",
+      "source_url": "https://www.espn.com/nba/story/_/id/45072650/cavs-garland-mobley-hunter-returning-game-3"
+    },
+    {
+      "sid": "25-IND-062116",
+      "category": "unexplained",
+      "headline": "No news found on the off-day after Finals Game 6",
+      "detail": "Game 6 (IND 108-91) ended ~02:45Z Jun 20. There were no injury-report changes on Jun 20; Haliburton (calf) was next listed as questionable in the 5 PM ET Jun 21 report. The ESPN feed has no Pacers or Thunder news that day. This is the mirror image of 25-OKC-062114 at the same hour, so it is probably delayed post-G6 repricing toward a Game 7 coin-flip rather than news.",
+      "news_time_utc": null,
+      "lag_hours_news_to_onset": null,
+      "confidence": "low",
+      "source_url": "https://www.espn.com/nba/story/_/id/45546506/pacers-tyrese-haliburton-play-game-6-rick-carlisle-says"
+    },
+    {
+      "sid": "25-LAL-020213",
+      "category": "trade",
+      "headline": "Mavericks trade Luka Doncic to Lakers for Anthony Davis (3-team deal)",
+      "detail": "Shams Charania (ESPN) broke the trade at 12:16 a.m. ET Feb 2, 2025 (05:16Z). The onset came ~1.7h later.",
+      "news_time_utc": "2025-02-02T05:16Z",
+      "lag_hours_news_to_onset": 1.7,
+      "confidence": "high",
+      "source_url": "https://www.espn.com/nba/story/_/id/43659380/sources-mavericks-trading-doncic-lakers-anthony-davis"
+    },
+    {
+      "sid": "25-OKC-061816",
+      "category": "injury_rival_star",
+      "headline": "Haliburton hampered by right calf injury in Game 5 (rival star)",
+      "detail": "ESPN's postgame story (1:27 AM ET Jun 17 = 05:27Z) reported Haliburton was limited by a sore right calf ('If I can walk, then I want to play'), 6.5h before onset. The follow-up Shams report (calf strain, MRI, likely questionable for G6) came at 3:08 PM ET (19:08Z), after onset, and may have extended the move. He was first listed questionable in the 5 PM ET Jun 18 report.",
+      "news_time_utc": "2025-06-17T05:27Z",
+      "lag_hours_news_to_onset": 6.6,
+      "confidence": "medium",
+      "source_url": "https://www.espn.com/nba/story/_/id/45528353/pacers-star-tyrese-haliburton-limited-sore-calf-game-5-nba-finals-loss-thunder"
+    },
+    {
+      "sid": "25-OKC-062114",
+      "category": "unexplained",
+      "headline": "No news found on the off-day after Finals Game 6 (mirror of IND move)",
+      "detail": "This is the same event as 25-IND-062116. There was no injury-report change on Jun 20 and no OKC or IND news in the ESPN feed. Game 6 ended ~02:45Z Jun 20, 13h before onset. Likely post-G6 repricing or drift.",
+      "news_time_utc": null,
+      "lag_hours_news_to_onset": null,
+      "confidence": "low",
+      "source_url": "https://www.espn.com/nba/story/_/id/45548639/okc-flops-uncharacteristic-dud-game-6-nba-finals"
+    },
+    {
+      "sid": "26-NYK-051104",
+      "category": "pregame_injury_report",
+      "headline": "OG Anunoby (hamstring) moved from OUT to QUESTIONABLE for Game 4 at PHI",
+      "detail": "Anunoby had been OUT for Game 3. The 5:00 PM ET May 9 report (21:00Z) listed him QUESTIONABLE for Game 4 (NYK up 3-0), which signals he is near a return; he was ruled out again at 2:30 PM ET May 10, after onset. The 12h lag is long and no other NYK news was found. Overnight context: DET (East #1) lost Game 3 to CLE (ended 21:52Z May 9) and OKC went 7-0 (ended 03:00Z May 10).",
+      "news_time_utc": "2026-05-09T21:00Z",
+      "lag_hours_news_to_onset": 12.0,
+      "confidence": "low",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-05-09_05_00PM.pdf"
+    },
+    {
+      "sid": "26-OKC-121209",
+      "category": "market_drift",
+      "headline": "Delayed overnight repricing after OKC's 138-89 Cup quarterfinal rout (24-1 start)",
+      "detail": "No off-court news was found: no OKC or contender injury-report changes Dec 10-11, and nothing relevant in the ESPN feed. OKC's 49-point NBA Cup QF win over PHX ended 02:49Z Dec 11, about 6h before onset, so this looks like late repricing in thin overnight trading rather than news.",
+      "news_time_utc": null,
+      "lag_hours_news_to_onset": null,
+      "confidence": "low",
+      "source_url": "https://www.espn.com/nba/story/_/id/47273843/thunder-blow-suns-match-73-win-warriors-24-1-start"
+    },
+    {
+      "sid": "26-OKC-052508",
+      "category": "injury_own_star",
+      "headline": "Thunder rule Ajay Mitchell (calf/soleus strain) out of WCF Game 4; Jalen Williams questionable",
+      "detail": "The 6:30 PM ET May 23 injury report (22:30Z), and ESPN at 6:33 PM ET, listed Ajay Mitchell OUT (right soleus/calf strain, a new injury) and Jalen Williams QUESTIONABLE (hamstring). At 22:37Z, Spurs coach Mitch Johnson said Fox and Harper would play. Williams was downgraded to OUT at 7:30 PM ET May 24, after onset. Game 4 tipped 00:13Z May 25 (SAS won 103-82). The 15-pt size and 11.5h lag suggest part of the move is pre-G4 repricing in a thin book.",
+      "news_time_utc": "2026-05-23T22:30Z",
+      "lag_hours_news_to_onset": 11.5,
+      "confidence": "medium",
+      "source_url": "https://www.espn.com/nba/story/_/id/48856022/thunder-rule-ajay-mitchell-game-4-calf-strain"
+    },
+    {
+      "sid": "26-SAS-051110",
+      "category": "unexplained",
+      "headline": "No pregame news before Spurs at Wolves Game 4",
+      "detail": "SAS had no injury-report entries all day (only MIN's DiVincenzo was out), and the whole roster played. Tip was 23:43Z, 1.7h after onset. The only nearby event was NYK finishing its sweep of PHI at 22:11Z, which is not credible for -4 pts on SAS. If the onset estimate is early, the likely in-game cause is Wembanyama's flagrant-2 ejection at 00:21-00:24Z May 11.",
+      "news_time_utc": null,
+      "lag_hours_news_to_onset": null,
+      "confidence": "low",
+      "source_url": "https://www.espn.com/nba/story/_/id/48736940/spurs-victor-wembanyama-ejected-game-4-career-first-elbowing-timberwolves-naz-reid"
+    },
+    {
+      "sid": "26-OKC-061816-check",
+      "category": "rival_news",
+      "headline": "NYK 13.75->16.15 (May 18-19) coincides with real rival results, so not obviously noise",
+      "detail": "Three things fit the window. (1) CLE eliminated East #1 DET 125-94 in Game 7, ending 02:48Z May 18, so NYK avoided DET. (2) Anunoby was listed PROBABLE for ECF Game 1 in the 5:00 PM ET May 18 report (21:00Z), after missing the end of the PHI series. (3) SAS beat title favorite OKC 122-115 in 2OT in WCF Game 1, ending 03:43Z May 19. NYK's own Game 1 tipped 00:13Z May 20. Which event applies depends on the exact onset hour.",
+      "news_time_utc": null,
+      "lag_hours_news_to_onset": null,
+      "confidence": "low",
+      "source_url": "https://www.espn.com/nba/story/_/id/48812302/wembanyama-explodes-41-spurs-stun-thunder-game-1"
+    }
+  ],
+  "method": ""
+}

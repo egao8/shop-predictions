@@ -1,0 +1,849 @@
+{
+  "meta": {
+    "as_of": "2026-10-04",
+    "scope": "NBA-first fan merch + local businesses; can a merchant act on a day-T prediction-market signal to capture T+1..T+21 demand",
+    "units": "lead_time_days_* are calendar days (business-day figures converted ~x1.4); fractional = hours/24",
+    "labels": "[est] = analyst estimate; [secondary] = non-primary or vendor-marketing source",
+    "companion_brief": "execution_leadtimes.md"
+  },
+  "archetypes": [
+    {
+      "id": "pod",
+      "name": "Print-on-demand fan store (Printful / Printify / Gelato)",
+      "description": "Zero-inventory Shopify store; each order printed (DTG/DTF) and shipped by the POD provider. Typically unlicensed 'city/vibe' designs.",
+      "actions": [
+        {
+          "action": "Create design and publish synced Shopify listing",
+          "lead_time_days_fast": 0.02,
+          "lead_time_days_typical": 0.1,
+          "lead_time_days_slow": 1,
+          "cost_notes": "Design labor only; mockups auto-generated. Printful markets 'time-to-market from 6 months to 1 hour or less' [2nd: vendor marketing]. Typical/slow include design time [est].",
+          "source_urls": [
+            "https://www.printful.com/enterprise/sports-merchandise",
+            "https://help.printful.com/hc/en-us/articles/360014007240-How-do-I-add-products-to-my-store"
+          ]
+        },
+        {
+          "action": "POD production after order (fulfillment)",
+          "lead_time_days_fast": 2,
+          "lead_time_days_typical": 4,
+          "lead_time_days_slow": 9,
+          "cost_notes": "Printful: 2-5 business days (>97% ship <=5 bd, >50% <=3 bd); Printify: most orders ship within 2-7 bd. Calendar-day conversion [est]. Peak season adds 2-5 days [2nd].",
+          "source_urls": [
+            "https://printful.com/shipping",
+            "https://help.printful.com/hc/en-us/articles/360014007980-How-long-does-fulfillment-take",
+            "https://help.printify.com/hc/en-us/articles/4483629751825-What-are-Printify-s-production-times-like"
+          ]
+        },
+        {
+          "action": "US shipping after production",
+          "lead_time_days_fast": 1,
+          "lead_time_days_typical": 5,
+          "lead_time_days_slow": 9,
+          "cost_notes": "Printful US standard 3-4 bd, express 1-3 bd. Customer-paid shipping typically ~$4 first tee [2nd].",
+          "source_urls": [
+            "https://printful.com/shipping",
+            "https://podvector.ai/articles/printful/costs-and-charges/printful-bellacanvas-3001-price-base-cost-full-breakdown-for-pod-sellers"
+          ]
+        },
+        {
+          "action": "End-to-end order -> customer doorstep",
+          "lead_time_days_fast": 3,
+          "lead_time_days_typical": 9,
+          "lead_time_days_slow": 21,
+          "cost_notes": "Printify Express: 2-3 bd total on select US products; typical total 7-12 days, worst 14-21 [2nd]. Gelato claims US delivery 3-5 days [vendor marketing].",
+          "source_urls": [
+            "https://help.printify.com/hc/en-us/articles/4483629751825-What-are-Printify-s-production-times-like",
+            "https://www.gelato.com/en-US/delivery-times"
+          ]
+        },
+        {
+          "action": "Launch new Meta ad (creative + ad set) and pass review",
+          "lead_time_days_fast": 0.1,
+          "lead_time_days_typical": 1,
+          "lead_time_days_slow": 2,
+          "cost_notes": "Meta: review 'typically completed within 24 hours'; may take longer. Requires pre-built creative.",
+          "source_urls": [
+            "https://conductatlas.com/platform/meta-ads/meta-advertising-policies/provision/CA-P-053169/ad-review-typically-completed-within-24-hours/"
+          ]
+        },
+        {
+          "action": "Meta ad set exits learning phase (stable CPA)",
+          "lead_time_days_fast": 3,
+          "lead_time_days_typical": 7,
+          "lead_time_days_slow": 14,
+          "cost_notes": "~50 optimization events per ad set within 7 days => daily budget ~ 7x target CPA (e.g. $15 CPA -> ~$107/day). Budget edits >~20% (or targeting/creative/bid changes) can reset learning; 'Learning Limited' if 50/7d unreachable. Slow value = 2 resets [est].",
+          "source_urls": [
+            "https://jetfuel.agency/what-is-the-meta-ads-learning-phase-how-to-exit-it-faster-in-2026/",
+            "https://www.facebook.com/business/help/112167992830700"
+          ]
+        },
+        {
+          "action": "Google Ads smart-bidding calibration after change",
+          "lead_time_days_fast": 3,
+          "lead_time_days_typical": 7,
+          "lead_time_days_slow": 14,
+          "cost_notes": "~50 conversion events or ~3 conversion cycles; allow >=24h for ad review [2nd for 7-day norm].",
+          "source_urls": [
+            "https://support.google.com/google-ads/answer/12563349"
+          ]
+        },
+        {
+          "action": "Send email campaign to existing list (Klaviyo)",
+          "lead_time_days_fast": 0.01,
+          "lead_time_days_typical": 0.04,
+          "lead_time_days_slow": 0.5,
+          "cost_notes": "Minutes for send; SendGrid infrastructure reports median delivery 1.9 s. Copy/design time dominates [est].",
+          "source_urls": [
+            "https://customers.twilio.com/en-us/klaviyo"
+          ]
+        },
+        {
+          "action": "Send SMS campaign to existing subscribers (Klaviyo)",
+          "lead_time_days_fast": 0.01,
+          "lead_time_days_typical": 0.12,
+          "lead_time_days_slow": 0.25,
+          "cost_notes": "Throughput 10 msg/s (toll-free/10DLC) => 100k msgs ~2.8 h; short code 100 msg/s => ~17 min. One-time setup must precede season: toll-free verification 7-10 business days, short code 8-12 weeks.",
+          "source_urls": [
+            "https://academy.klaviyo.com/en-us/learning-paths/add-text-messaging-as-a-service-for-your-agency/courses/understand-klaviyo-sms/lessons/choose-the-right-sending-number"
+          ]
+        }
+      ],
+      "gross_margin_pct_typical": 57,
+      "unit_cost_usd_typical": 12.95,
+      "retail_price_usd_typical": 29.99,
+      "overstock_salvage_pct": null,
+      "overstock_notes": "Not applicable: made to order, no unsold units. Downside limited to design time and ad spend. Gross margin excludes shipping and ads; Printful Growth/Business plans lower unit cost to $9.05/$8.45; Printify Gildan 5000 ~$7-9.",
+      "can_act_on_signal_within_days": 1,
+      "notes": "Can capture orders same day; physical delivery lags 3-12 days, which matters if fans want the item before a specific game."
+    },
+    {
+      "id": "dtf_inhouse",
+      "name": "In-house DTF/DTG print shop on Shopify holding blanks",
+      "description": "Merchant holds blank tees (Gildan/Bella+Canvas from SanMar, S&S Activewear/alphabroder) and presses DTF transfers or prints DTG in-house; ships own orders.",
+      "actions": [
+        {
+          "action": "Restock blanks from US wholesaler (SanMar / S&S / alphabroder)",
+          "lead_time_days_fast": 1,
+          "lead_time_days_typical": 2,
+          "lead_time_days_slow": 5,
+          "cost_notes": "SanMar: 9 DCs, same-day ship if ordered before cutoff (UPS Ground 4pm local; next-day air 1-4pm). S&S: 14 warehouses, 1-2 day delivery to most of US. alphabroder (S&S-owned since Oct 2024): 10 DCs, next-day to 96% of US population. Gildan 5000 ~$3.06-3.41/unit at $100-1,500 orders. Slow = color/size stockouts [est].",
+          "source_urls": [
+            "https://info.sanmar.com/resources/shipping-cutoff-times",
+            "https://www.ssactivewear.com/welcomessactivewear",
+            "https://alphabroder.com/warehouses",
+            "https://impressionsmagazine.com/news/ss-activewear-completes-acquisition-of-alphabroder/164262/",
+            "https://www.blankstyle.com/gildan-5000-g500-heavy-weight-cotton-t-shirt"
+          ]
+        },
+        {
+          "action": "Order DTF transfers / gang sheets (e.g. Ninja Transfers)",
+          "lead_time_days_fast": 1,
+          "lead_time_days_typical": 3,
+          "lead_time_days_slow": 9,
+          "cost_notes": "Ninja: order before 3pm ET for same-day ship / Next Day Air (from ~$25.55-$28.11); 40% of orders ship next day; usually same/next bd production, up to 2-3 bd; standard ground 5-7 bd (free >$75). DTF list price from ~$0.03/sq in with up to 65% volume discount => ~$1.50-3.60 per 11x11 front [est].",
+          "source_urls": [
+            "https://digitaloutput.net/ninja-transfers-announces-same-day-shipping-with-low-cost-next-day-delivery/",
+            "https://ninjatransfers.com/collections/transfers/products/dtf-transfers"
+          ]
+        },
+        {
+          "action": "Press DTF transfers onto blanks (in-house)",
+          "lead_time_days_fast": 0.05,
+          "lead_time_days_typical": 0.5,
+          "lead_time_days_slow": 2,
+          "cost_notes": "30-60 s press per shirt (~1-2 min all-in) => ~60-120 shirts/hour per press+operator [est from Printify]. Labor ~$0.50-1.00/shirt [est].",
+          "source_urls": [
+            "https://printify.com/blog/how-long-does-it-take-to-print-a-shirt/"
+          ]
+        },
+        {
+          "action": "Print DTG in-house",
+          "lead_time_days_fast": 0.05,
+          "lead_time_days_typical": 0.5,
+          "lead_time_days_slow": 2,
+          "cost_notes": "DTG 2-3 min/shirt print + pretreat/cure; production units e.g. Epson F3070 ~65 shirts/h, Kornit Storm II ~60/h [2nd].",
+          "source_urls": [
+            "https://printify.com/blog/how-long-does-it-take-to-print-a-shirt/",
+            "https://lawsonsp.com/blogs/education-and-training/comparing-best-production-dtg-printers"
+          ]
+        },
+        {
+          "action": "Ship to customer (UPS Ground / USPS)",
+          "lead_time_days_fast": 1,
+          "lead_time_days_typical": 3,
+          "lead_time_days_slow": 5,
+          "cost_notes": "Carrier ground transit [est].",
+          "source_urls": []
+        },
+        {
+          "action": "Launch new Meta ad (creative + ad set) and pass review",
+          "lead_time_days_fast": 0.1,
+          "lead_time_days_typical": 1,
+          "lead_time_days_slow": 2,
+          "cost_notes": "Meta: review 'typically completed within 24 hours'; may take longer. Requires pre-built creative.",
+          "source_urls": [
+            "https://conductatlas.com/platform/meta-ads/meta-advertising-policies/provision/CA-P-053169/ad-review-typically-completed-within-24-hours/"
+          ]
+        },
+        {
+          "action": "Meta ad set exits learning phase (stable CPA)",
+          "lead_time_days_fast": 3,
+          "lead_time_days_typical": 7,
+          "lead_time_days_slow": 14,
+          "cost_notes": "~50 optimization events per ad set within 7 days => daily budget ~ 7x target CPA (e.g. $15 CPA -> ~$107/day). Budget edits >~20% (or targeting/creative/bid changes) can reset learning; 'Learning Limited' if 50/7d unreachable. Slow value = 2 resets [est].",
+          "source_urls": [
+            "https://jetfuel.agency/what-is-the-meta-ads-learning-phase-how-to-exit-it-faster-in-2026/",
+            "https://www.facebook.com/business/help/112167992830700"
+          ]
+        },
+        {
+          "action": "Google Ads smart-bidding calibration after change",
+          "lead_time_days_fast": 3,
+          "lead_time_days_typical": 7,
+          "lead_time_days_slow": 14,
+          "cost_notes": "~50 conversion events or ~3 conversion cycles; allow >=24h for ad review [2nd for 7-day norm].",
+          "source_urls": [
+            "https://support.google.com/google-ads/answer/12563349"
+          ]
+        },
+        {
+          "action": "Send email campaign to existing list (Klaviyo)",
+          "lead_time_days_fast": 0.01,
+          "lead_time_days_typical": 0.04,
+          "lead_time_days_slow": 0.5,
+          "cost_notes": "Minutes for send; SendGrid infrastructure reports median delivery 1.9 s. Copy/design time dominates [est].",
+          "source_urls": [
+            "https://customers.twilio.com/en-us/klaviyo"
+          ]
+        },
+        {
+          "action": "Send SMS campaign to existing subscribers (Klaviyo)",
+          "lead_time_days_fast": 0.01,
+          "lead_time_days_typical": 0.12,
+          "lead_time_days_slow": 0.25,
+          "cost_notes": "Throughput 10 msg/s (toll-free/10DLC) => 100k msgs ~2.8 h; short code 100 msg/s => ~17 min. One-time setup must precede season: toll-free verification 7-10 business days, short code 8-12 weeks.",
+          "source_urls": [
+            "https://academy.klaviyo.com/en-us/learning-paths/add-text-messaging-as-a-service-for-your-agency/courses/understand-klaviyo-sms/lessons/choose-the-right-sending-number"
+          ]
+        }
+      ],
+      "gross_margin_pct_typical": 77,
+      "unit_cost_usd_typical": 6.5,
+      "retail_price_usd_typical": 28,
+      "overstock_salvage_pct": 15,
+      "overstock_notes": "15% = estimated recovery on printed, result-specific tees after elimination (liquidation of dead seasonal apparel ~5-15% of retail per secondary source). Unprinted blanks ~100% reusable for other teams/designs; unpressed transfers lose their cost. Unit cost estimate: blank ~$3.25 + transfer ~$2.50 + labor ~$0.75.",
+      "can_act_on_signal_within_days": 2,
+      "notes": "Best fit: hold blanks, pre-buy transfers for teams whose odds rise, press to order."
+    },
+    {
+      "id": "screenprint_contract",
+      "name": "Shopify store using a contract screen printer",
+      "description": "Merchant commits a batch (MOQ ~24-50+/design) with a contract decorator, receives finished goods, then fulfills (self or 3PL).",
+      "actions": [
+        {
+          "action": "Artwork proof and approval",
+          "lead_time_days_fast": 0.5,
+          "lead_time_days_typical": 1,
+          "lead_time_days_slow": 3,
+          "cost_notes": "Clock does not start until art approved and paid; approval delays are the most common slip [est for days].",
+          "source_urls": [
+            "https://charmcityscreenprint.com/screen-printing-turnaround-time/",
+            "https://bluechipathletic.com/pages/rush-services"
+          ]
+        },
+        {
+          "action": "Standard screen-print production",
+          "lead_time_days_fast": 9,
+          "lead_time_days_typical": 13,
+          "lead_time_days_slow": 21,
+          "cost_notes": "Standard 7-10 business days after approval (some shops 10 bd standard; some 15-30 bd). Calendar conversion [est].",
+          "source_urls": [
+            "https://charmcityscreenprint.com/screen-printing-turnaround-time/",
+            "https://bluechipathletic.com/pages/rush-services"
+          ]
+        },
+        {
+          "action": "Rush screen-print production",
+          "lead_time_days_fast": 1,
+          "lead_time_days_typical": 4,
+          "lead_time_days_slow": 7,
+          "cost_notes": "Rush fee as % of order: 1 bd +60%, 2-3 bd +50%, 4-5 bd +25%, 6-9 bd +10% (Blue Chip; 2pm CT cutoff). Rush often requires higher minimums [2nd].",
+          "source_urls": [
+            "https://bluechipathletic.com/pages/rush-services"
+          ]
+        },
+        {
+          "action": "Freight from printer to merchant/3PL and receiving",
+          "lead_time_days_fast": 1,
+          "lead_time_days_typical": 3,
+          "lead_time_days_slow": 6,
+          "cost_notes": "Ground 1-3 days [est]; 3PL receiving: Flexport direct inbound 1-3 calendar days, crossdock 3-11 days; ShipBob 'hours or a few days'.",
+          "source_urls": [
+            "https://support.portal.flexport.com/hc/en-us/articles/17535744483607-Estimated-Receiving-Times",
+            "https://developer.shipbob.com/guides/receiving"
+          ]
+        },
+        {
+          "action": "Open pre-orders on Shopify to measure demand before committing",
+          "lead_time_days_fast": 0.05,
+          "lead_time_days_typical": 0.5,
+          "lead_time_days_slow": 1,
+          "cost_notes": "Shopify Selling Plan API supports pre-orders/deposits via apps; requires Shopify Payments or PayPal Express.",
+          "source_urls": [
+            "https://shopify.dev/docs/apps/purchase-options/deferred"
+          ]
+        },
+        {
+          "action": "Launch new Meta ad (creative + ad set) and pass review",
+          "lead_time_days_fast": 0.1,
+          "lead_time_days_typical": 1,
+          "lead_time_days_slow": 2,
+          "cost_notes": "Meta: review 'typically completed within 24 hours'; may take longer. Requires pre-built creative.",
+          "source_urls": [
+            "https://conductatlas.com/platform/meta-ads/meta-advertising-policies/provision/CA-P-053169/ad-review-typically-completed-within-24-hours/"
+          ]
+        },
+        {
+          "action": "Meta ad set exits learning phase (stable CPA)",
+          "lead_time_days_fast": 3,
+          "lead_time_days_typical": 7,
+          "lead_time_days_slow": 14,
+          "cost_notes": "~50 optimization events per ad set within 7 days => daily budget ~ 7x target CPA (e.g. $15 CPA -> ~$107/day). Budget edits >~20% (or targeting/creative/bid changes) can reset learning; 'Learning Limited' if 50/7d unreachable. Slow value = 2 resets [est].",
+          "source_urls": [
+            "https://jetfuel.agency/what-is-the-meta-ads-learning-phase-how-to-exit-it-faster-in-2026/",
+            "https://www.facebook.com/business/help/112167992830700"
+          ]
+        },
+        {
+          "action": "Google Ads smart-bidding calibration after change",
+          "lead_time_days_fast": 3,
+          "lead_time_days_typical": 7,
+          "lead_time_days_slow": 14,
+          "cost_notes": "~50 conversion events or ~3 conversion cycles; allow >=24h for ad review [2nd for 7-day norm].",
+          "source_urls": [
+            "https://support.google.com/google-ads/answer/12563349"
+          ]
+        },
+        {
+          "action": "Send email campaign to existing list (Klaviyo)",
+          "lead_time_days_fast": 0.01,
+          "lead_time_days_typical": 0.04,
+          "lead_time_days_slow": 0.5,
+          "cost_notes": "Minutes for send; SendGrid infrastructure reports median delivery 1.9 s. Copy/design time dominates [est].",
+          "source_urls": [
+            "https://customers.twilio.com/en-us/klaviyo"
+          ]
+        },
+        {
+          "action": "Send SMS campaign to existing subscribers (Klaviyo)",
+          "lead_time_days_fast": 0.01,
+          "lead_time_days_typical": 0.12,
+          "lead_time_days_slow": 0.25,
+          "cost_notes": "Throughput 10 msg/s (toll-free/10DLC) => 100k msgs ~2.8 h; short code 100 msg/s => ~17 min. One-time setup must precede season: toll-free verification 7-10 business days, short code 8-12 weeks.",
+          "source_urls": [
+            "https://academy.klaviyo.com/en-us/learning-paths/add-text-messaging-as-a-service-for-your-agency/courses/understand-klaviyo-sms/lessons/choose-the-right-sending-number"
+          ]
+        }
+      ],
+      "gross_margin_pct_typical": 71,
+      "unit_cost_usd_typical": 8,
+      "retail_price_usd_typical": 28,
+      "overstock_salvage_pct": 15,
+      "overstock_notes": "Unit cost is an estimate (blank + 1-2 color front, 72-144 pcs); rush adds 25-60% => $10-13. Salvage estimate as for DTF printed goods; evergreen 'city' designs retain more value than result-specific prints.",
+      "can_act_on_signal_within_days": 5,
+      "notes": "5 days only with paid rush (+25-60%); standard path needs ~14-20 days from signal to goods in hand."
+    },
+    {
+      "id": "licensed_reseller",
+      "name": "Licensed-product reseller (New Era / '47 / Mitchell & Ness / Fanatics goods)",
+      "description": "Retailer buying officially licensed NBA goods wholesale. Cannot produce team-logo goods itself without an NBA license; championship gear is controlled by Fanatics/Nike/New Era.",
+      "actions": [
+        {
+          "action": "Order New Era Made-to-Order (M2O) caps",
+          "lead_time_days_fast": 14,
+          "lead_time_days_typical": 18,
+          "lead_time_days_slow": 21,
+          "cost_notes": "New Era sourcing guide: M2O 2-3 weeks.",
+          "source_urls": [
+            "https://www.littleleague.org/downloads/new-era-cap-sourcing"
+          ]
+        },
+        {
+          "action": "Order New Era Domestic program caps",
+          "lead_time_days_fast": 21,
+          "lead_time_days_typical": 25,
+          "lead_time_days_slow": 28,
+          "cost_notes": "Domestic 3-4 weeks; MOQ 36 units/SKU.",
+          "source_urls": [
+            "https://www.littleleague.org/downloads/new-era-cap-sourcing"
+          ]
+        },
+        {
+          "action": "Order New Era GCP caps",
+          "lead_time_days_fast": 56,
+          "lead_time_days_typical": 63,
+          "lead_time_days_slow": 70,
+          "cost_notes": "GCP 8-10 weeks; MOQ 36 units/SKU.",
+          "source_urls": [
+            "https://www.littleleague.org/downloads/new-era-cap-sourcing"
+          ]
+        },
+        {
+          "action": "Order New Era on-field / program caps",
+          "lead_time_days_fast": 140,
+          "lead_time_days_typical": 154,
+          "lead_time_days_slow": 168,
+          "cost_notes": "On-field and programs 20-24 weeks; MOQ 144 units/SKU.",
+          "source_urls": [
+            "https://www.littleleague.org/downloads/new-era-cap-sourcing"
+          ]
+        },
+        {
+          "action": "At-once replenishment of in-stock licensed goods from licensee/distributor",
+          "lead_time_days_fast": 3,
+          "lead_time_days_typical": 7,
+          "lead_time_days_slow": 14,
+          "cost_notes": "Unverified estimate; depends on account and allocation. During hot markets, allocation goes to Fanatics/major retailers first [est].",
+          "source_urls": []
+        },
+        {
+          "action": "Championship 'locker room' gear on sale (Fanatics / Nike / New Era)",
+          "lead_time_days_fast": 0,
+          "lead_time_days_typical": 0.5,
+          "lead_time_days_slow": 1,
+          "cost_notes": "Fanatics' decorator prints from the minute the game ends ('game ends at 11:30, printing at 11:31'), 34k shirts/day at FL plant; Walmart/Target pickup overnight; limited pre-produced locker-room runs for BOTH teams. Fanatics launched 300+ Knicks products at the buzzer (2026). Not accessible to small resellers except via allocations.",
+          "source_urls": [
+            "https://printandpromomarketing.com/article/atlas-embroidery-screen-printing-delivers-hot-market-decoration-for-stanley-cup-winner-merch/",
+            "https://sgbonline.com/fanatics-new-york-knicks-championship-merch-sales-breaks-records/",
+            "https://www.news9.com/story/68587614d8d5fca96bb242ac/okc-thunder-merch-nba-finals-pacers"
+          ]
+        },
+        {
+          "action": "Obtain an NBA license",
+          "lead_time_days_fast": 90,
+          "lead_time_days_typical": 180,
+          "lead_time_days_slow": 365,
+          "cost_notes": "Lead time is an estimate. Historical NBA license form: 12% royalty on net sales, $46,000 minimum guarantee, $11,500 advance. Terms vary.",
+          "source_urls": [
+            "https://www.lawinsider.com/contracts/7fcFN6oJus5"
+          ]
+        },
+        {
+          "action": "Launch new Meta ad (creative + ad set) and pass review",
+          "lead_time_days_fast": 0.1,
+          "lead_time_days_typical": 1,
+          "lead_time_days_slow": 2,
+          "cost_notes": "Meta: review 'typically completed within 24 hours'; may take longer. Requires pre-built creative.",
+          "source_urls": [
+            "https://conductatlas.com/platform/meta-ads/meta-advertising-policies/provision/CA-P-053169/ad-review-typically-completed-within-24-hours/"
+          ]
+        },
+        {
+          "action": "Meta ad set exits learning phase (stable CPA)",
+          "lead_time_days_fast": 3,
+          "lead_time_days_typical": 7,
+          "lead_time_days_slow": 14,
+          "cost_notes": "~50 optimization events per ad set within 7 days => daily budget ~ 7x target CPA (e.g. $15 CPA -> ~$107/day). Budget edits >~20% (or targeting/creative/bid changes) can reset learning; 'Learning Limited' if 50/7d unreachable. Slow value = 2 resets [est].",
+          "source_urls": [
+            "https://jetfuel.agency/what-is-the-meta-ads-learning-phase-how-to-exit-it-faster-in-2026/",
+            "https://www.facebook.com/business/help/112167992830700"
+          ]
+        },
+        {
+          "action": "Google Ads smart-bidding calibration after change",
+          "lead_time_days_fast": 3,
+          "lead_time_days_typical": 7,
+          "lead_time_days_slow": 14,
+          "cost_notes": "~50 conversion events or ~3 conversion cycles; allow >=24h for ad review [2nd for 7-day norm].",
+          "source_urls": [
+            "https://support.google.com/google-ads/answer/12563349"
+          ]
+        },
+        {
+          "action": "Send email campaign to existing list (Klaviyo)",
+          "lead_time_days_fast": 0.01,
+          "lead_time_days_typical": 0.04,
+          "lead_time_days_slow": 0.5,
+          "cost_notes": "Minutes for send; SendGrid infrastructure reports median delivery 1.9 s. Copy/design time dominates [est].",
+          "source_urls": [
+            "https://customers.twilio.com/en-us/klaviyo"
+          ]
+        },
+        {
+          "action": "Send SMS campaign to existing subscribers (Klaviyo)",
+          "lead_time_days_fast": 0.01,
+          "lead_time_days_typical": 0.12,
+          "lead_time_days_slow": 0.25,
+          "cost_notes": "Throughput 10 msg/s (toll-free/10DLC) => 100k msgs ~2.8 h; short code 100 msg/s => ~17 min. One-time setup must precede season: toll-free verification 7-10 business days, short code 8-12 weeks.",
+          "source_urls": [
+            "https://academy.klaviyo.com/en-us/learning-paths/add-text-messaging-as-a-service-for-your-agency/courses/understand-klaviyo-sms/lessons/choose-the-right-sending-number"
+          ]
+        }
+      ],
+      "gross_margin_pct_typical": 50,
+      "unit_cost_usd_typical": 23,
+      "retail_price_usd_typical": 46,
+      "overstock_salvage_pct": 40,
+      "overstock_notes": "Cost $22-26 for 59FIFTY is a secondary-source figure; retail ~$46 for locker-room 9FIFTY. Salvage 40% of cost is an estimate for evergreen team caps carried/marked down next season; event-specific gear (e.g. 'Conference Champions') far lower (~10-15%).",
+      "can_act_on_signal_within_days": 14,
+      "notes": "Can act within 0-1 days on price, ads, email and stock reallocation; new product needs >=14-28 days (M2O/domestic) or 20-24 weeks (programs)."
+    },
+    {
+      "id": "restaurant_bar",
+      "name": "Restaurant / sports bar near the arena",
+      "description": "Local on-premise business whose demand spikes on home playoff game nights (and watch parties for away games).",
+      "actions": [
+        {
+          "action": "Reorder food from broadline distributor (US Foods / Sysco)",
+          "lead_time_days_fast": 1,
+          "lead_time_days_typical": 1,
+          "lead_time_days_slow": 3,
+          "cost_notes": "US Foods Pronto: 8pm cutoff for next-day delivery, 6 days/week, no minimum (charges <10 cases), 76 metro areas. Sysco: branch-specific cutoffs (e.g. Hawaii 4pm day-before); orders editable until cutoff in Sysco Shop. Accounts without daily routes wait for next scheduled delivery day [est].",
+          "source_urls": [
+            "https://usfoods.com/why-us-foods/our-programs/next-day-restaurant-delivery.html",
+            "https://www.sysco.com/contact/contact/our-locations/hawaii",
+            "https://sysco.com/shopmobile"
+          ]
+        },
+        {
+          "action": "Add/adjust staff shifts - independent venue not covered by fair-workweek law",
+          "lead_time_days_fast": 0.5,
+          "lead_time_days_typical": 2,
+          "lead_time_days_slow": 7,
+          "cost_notes": "Most independent bars/restaurants fall below coverage thresholds; constraint is staff availability [est].",
+          "source_urls": [
+            "https://seattle.gov/documents/Departments/LaborStandards/21_0405_Fact%20Sheet_SSO.pdf",
+            "https://www.seyfarth.com/news-insights/chicago-passes-expansive-fair-workweek-law-1.html",
+            "https://www.phila.gov/media/20231218102835/FWW-FAQ-December-2023.pdf"
+          ]
+        },
+        {
+          "action": "Add/adjust staff shifts - covered chain (NYC fast food; Chicago/Seattle/Philadelphia large restaurant chains)",
+          "lead_time_days_fast": 0,
+          "lead_time_days_typical": 14,
+          "lead_time_days_slow": 14,
+          "cost_notes": "Penalty-free only with 14 days' notice. NYC fast food premiums per change: $10 (add/shift, <14d), $20 (reduce, <14d), $15 (add, <7d), $45 (reduce, <7d), $75 (reduce <24h). Chicago/Seattle: +1 hour pay per change. Coverage: Chicago restaurants 30+ locations & 250+ employees; Seattle full-service 40+ locations & 500+ employees; Philadelphia 250+ employees & 30+ locations; LA City ordinance retail-only.",
+          "source_urls": [
+            "https://www.nyc.gov/site/dca/workers/workersrights/fastfood-retail-workers.page",
+            "https://www.nyc.gov/assets/dca/downloads/pdf/workers/FAQs-FairWorkweek-FastFood.pdf",
+            "https://www.seyfarth.com/news-insights/chicago-passes-expansive-fair-workweek-law-1.html",
+            "https://seattle.gov/documents/Departments/LaborStandards/21_0405_Fact%20Sheet_SSO.pdf",
+            "https://www.phila.gov/media/20231218102835/FWW-FAQ-December-2023.pdf",
+            "https://abc7.com/post/fair-work-week-workweek-los-angeles-city-council/12483646/"
+          ]
+        },
+        {
+          "action": "Game-day promotion via social / email / SMS",
+          "lead_time_days_fast": 0.05,
+          "lead_time_days_typical": 0.25,
+          "lead_time_days_slow": 1,
+          "cost_notes": "Hours [est].",
+          "source_urls": [
+            "https://academy.klaviyo.com/en-us/learning-paths/add-text-messaging-as-a-service-for-your-agency/courses/understand-klaviyo-sms/lessons/choose-the-right-sending-number"
+          ]
+        }
+      ],
+      "gross_margin_pct_typical": 68,
+      "unit_cost_usd_typical": null,
+      "retail_price_usd_typical": null,
+      "overstock_salvage_pct": 30,
+      "overstock_notes": "Estimates: food+beverage cost ~30-35% of sales (industry rule of thumb, not sourced here). Salvage: perishables low, shelf-stable beer/liquor high; blended ~30% [est]. Uplift evidence: near-arena restaurant spend +15-84% on Canadiens home playoff games 2026 (NHL analog); Toronto bar transactions +76% at 11pm after Raptors ECF G6 (2019). Away games/Sundays flat or negative.",
+      "can_act_on_signal_within_days": 1,
+      "notes": "Signal most useful as probability of a HOME game on a given date (Games 5-7 are 'if necessary')."
+    },
+    {
+      "id": "hotel_str",
+      "name": "Hotel / short-term rental near the arena",
+      "description": "Room-night inventory is fixed and perishable; the lever is price, minimum stay and restrictions set before bookings arrive.",
+      "actions": [
+        {
+          "action": "Reprice via hotel RMS (IDeaS / Duetto)",
+          "lead_time_days_fast": 0.01,
+          "lead_time_days_typical": 0.05,
+          "lead_time_days_slow": 1,
+          "cost_notes": "Continuous/real-time pricing between floor and ceiling; slow = once-daily optimization cadence [est].",
+          "source_urls": [
+            "https://ideas.com/news/durham-elevates-revenue-strategy-with-ideas-continuous-pricing/",
+            "https://www.hospitalitynet.org/news/4127789/nba-finals-2025-how-forward-looking-search-data-reveals-the-winning-playbook-for-hotels"
+          ]
+        },
+        {
+          "action": "Reprice STR via PriceLabs (or similar)",
+          "lead_time_days_fast": 0.04,
+          "lead_time_days_typical": 0.5,
+          "lead_time_days_slow": 1,
+          "cost_notes": "Default nightly sync (1-3x/day with add-on); Real-Time Sync up to 24 updates/day, min 60 min between triggers.",
+          "source_urls": [
+            "https://hello.pricelabs.co/blog/real-time-pricing-updates",
+            "https://help.pricelabs.co/portal/en/kb/articles/timed-sync"
+          ]
+        },
+        {
+          "action": "Set min-stay / close-out restrictions",
+          "lead_time_days_fast": 0.01,
+          "lead_time_days_typical": 0.1,
+          "lead_time_days_slow": 1,
+          "cost_notes": "Same channel-manager mechanics as price [est].",
+          "source_urls": [
+            "https://help.pricelabs.co/portal/en/kb/articles/timed-sync"
+          ]
+        },
+        {
+          "action": "Housekeeping/front-desk staffing (Chicago hotels covered by Fair Workweek)",
+          "lead_time_days_fast": 0,
+          "lead_time_days_typical": 14,
+          "lead_time_days_slow": 14,
+          "cost_notes": "Chicago covers hotels with >100 employees globally: 14-day notice, 1h predictability pay per change.",
+          "source_urls": [
+            "https://www.seyfarth.com/news-insights/chicago-passes-expansive-fair-workweek-law-1.html"
+          ]
+        }
+      ],
+      "gross_margin_pct_typical": null,
+      "unit_cost_usd_typical": null,
+      "retail_price_usd_typical": null,
+      "overstock_salvage_pct": 0,
+      "overstock_notes": "Unsold room-nights perish (0% salvage); the cost of a late signal is underpricing, not overstock. Evidence: Indianapolis 2025 Finals Game 4 ADR only +2% vs 30 days prior ('missed opportunity'); OKC hotel search +45% vs 22-month average; Milwaukee 2021 Finals rooms $400+/night.",
+      "can_act_on_signal_within_days": 0,
+      "notes": "Acts in minutes; value of the signal is moving rates before the booking wave."
+    }
+  ],
+  "facts": [
+    {
+      "claim": "Printful fulfillment time (all products)",
+      "value": "2-5 business days; >97% ship within 5 bd, >50% within 3 bd",
+      "source_url": "https://help.printful.com/hc/en-us/articles/360014007980-How-long-does-fulfillment-take"
+    },
+    {
+      "claim": "Printful US standard / express shipping after fulfillment",
+      "value": "3-4 / 1-3 business days",
+      "source_url": "https://printful.com/shipping"
+    },
+    {
+      "claim": "Printify typical production",
+      "value": "most orders ship within 2-7 business days",
+      "source_url": "https://help.printify.com/hc/en-us/articles/4483629751825-What-are-Printify-s-production-times-like"
+    },
+    {
+      "claim": "Printful Bella+Canvas 3001 base cost (S-XL, front DTG, US) [secondary]",
+      "value": "$12.95 free plan / $9.05 Growth / $8.45 Business; shipping $3.99 first tee",
+      "source_url": "https://podvector.ai/articles/printful/costs-and-charges/printful-bellacanvas-3001-price-base-cost-full-breakdown-for-pod-sellers"
+    },
+    {
+      "claim": "Printify Gildan 5000 base cost [secondary]",
+      "value": "$8.80 free / $7.04 Premium",
+      "source_url": "https://podvector.ai/articles/printify/costs-and-charges/printify-t-shirt-base-cost-full-breakdown-for-pod-sellers"
+    },
+    {
+      "claim": "SanMar distribution centers and UPS Ground cutoff",
+      "value": "9 DCs (Seattle, Reno, Dallas, Cincinnati, Jacksonville, Robbinsville NJ, Minneapolis, Richmond VA, Phoenix); UPS Ground cutoff 4pm local for same-day ship",
+      "source_url": "https://info.sanmar.com/resources/shipping-cutoff-times"
+    },
+    {
+      "claim": "S&S Activewear network",
+      "value": "14 warehouses; 1-2 day delivery to most of US; same-day ship before cutoff",
+      "source_url": "https://www.ssactivewear.com/welcomessactivewear"
+    },
+    {
+      "claim": "alphabroder network (acquired by S&S Oct 3, 2024)",
+      "value": "10 DCs; next-day to 96% of US population",
+      "source_url": "https://alphabroder.com/warehouses"
+    },
+    {
+      "claim": "Gildan 5000 blank price (S-XL, $100-$1,500 orders)",
+      "value": "$3.06-$3.41 per unit",
+      "source_url": "https://www.blankstyle.com/gildan-5000-g500-heavy-weight-cotton-t-shirt"
+    },
+    {
+      "claim": "Ninja Transfers same-day/next-day cutoff",
+      "value": "order before 3pm ET; 40% of orders next-day shipping; 99% arrive by deadline",
+      "source_url": "https://digitaloutput.net/ninja-transfers-announces-same-day-shipping-with-low-cost-next-day-delivery/"
+    },
+    {
+      "claim": "DTF press / DTG print time per shirt",
+      "value": "DTF press 30-60 s (1-2 min all-in); DTG 2-3 min print",
+      "source_url": "https://printify.com/blog/how-long-does-it-take-to-print-a-shirt/"
+    },
+    {
+      "claim": "Screen-print standard turnaround",
+      "value": "7-10 business days after artwork approval",
+      "source_url": "https://charmcityscreenprint.com/screen-printing-turnaround-time/"
+    },
+    {
+      "claim": "Screen-print rush fees (Blue Chip)",
+      "value": "1 bd +60%; 2-3 bd +50%; 4-5 bd +25%; 6-9 bd +10%; standard 10 bd",
+      "source_url": "https://bluechipathletic.com/pages/rush-services"
+    },
+    {
+      "claim": "New Era cap lead times and MOQs",
+      "value": "M2O 2-3 wk; Domestic 3-4 wk (MOQ 36/SKU); GCP 8-10 wk (36); on-field/programs 20-24 wk (144)",
+      "source_url": "https://www.littleleague.org/downloads/new-era-cap-sourcing"
+    },
+    {
+      "claim": "Historical NBA license economic terms",
+      "value": "12% royalty on net sales; $46,000 minimum guarantee; $11,500 advance",
+      "source_url": "https://www.lawinsider.com/contracts/7fcFN6oJus5"
+    },
+    {
+      "claim": "Fanatics hot-market championship production",
+      "value": "printing starts 1 minute after final whistle; 34k shirts/day (FL plant); retail by next morning; limited pre-produced locker-room gear for both teams",
+      "source_url": "https://printandpromomarketing.com/article/atlas-embroidery-screen-printing-delivers-hot-market-decoration-for-stanley-cup-winner-merch/"
+    },
+    {
+      "claim": "Fanatics LeBron-to-Lakers 2018 response",
+      "value": "merchandise live within hours using blank jerseys pre-positioned at 3 warehouses; ~half of Fanatics revenue from self-made products",
+      "source_url": "https://fortune.com/2018/08/24/fanatics-lebron-james-retail-ecommerce"
+    },
+    {
+      "claim": "2026 Knicks championship merch (Finals clinched Jun 13, 2026, 4-1 vs Spurs)",
+      "value": ">8,000 orders/min (record; Eagles 2025 = 5,500); top-selling champion in first 24h across sports; >2x 2020 Lakers; 300+ products launched at buzzer",
+      "source_url": "https://sgbonline.com/fanatics-new-york-knicks-championship-merch-sales-breaks-records/"
+    },
+    {
+      "claim": "2026 NBA Finals league-wide merch [secondary]",
+      "value": "new NBA Finals merchandise record across NBAStore.com, Fanatics, team stores, third-party retail; ~2x prior record (2020)",
+      "source_url": "https://insidersport.com/2026/06/18/nba-finals-record-new-york-knicks/"
+    },
+    {
+      "claim": "2020 Lakers championship demand concentration",
+      "value": "sold more in 12 hours than 2016 Cavaliers sold in 30 days; 85% mobile",
+      "source_url": "https://www.thescore.com/news/2038478"
+    },
+    {
+      "claim": "2024 NY Liberty championship demand concentration",
+      "value": "exceeded prior 30-day WNBA champion record in <24 hours",
+      "source_url": "https://fanaticsinc.com/news/sportico-liberty-merch-becomes-fanatics-fastest-post-finals-seller"
+    },
+    {
+      "claim": "Knicks merch during 2025 playoff run",
+      "value": "+80% vs prior season's playoffs",
+      "source_url": "https://www.fanaticsinc.com/news/bloomberg-new-york-knicks-merchandise-sales-skyrocket-in-nba-playoff-run"
+    },
+    {
+      "claim": "Licensed championship retail price points (2026 Knicks) [secondary]",
+      "value": "tees $42-$50; New Era locker-room 9FIFTY $46",
+      "source_url": "https://www.rollingstone.com/product-recommendations/style/knicks-nba-champions-winners-merch-nike-t-shirt-buy-online-1235577154/"
+    },
+    {
+      "claim": "Losing-team pre-printed gear",
+      "value": "NFL via Good360 (since 2015) shipped outside North America; World Vision historically worked with MLB/NFL/NBA; current NBA partner unconfirmed",
+      "source_url": "https://www.mentalfloss.com/article/29884/what-happens-losing-teams-championship-shirts"
+    },
+    {
+      "claim": "Small-business overstock example",
+      "value": "Kansas City shop with 'thousands' of Chiefs playoff items after Jan 2026 exit; custom merch ordered ~8 months ahead",
+      "source_url": "https://www.kshb.com/news/local-news/kansas-city-small-business-left-with-thousands-of-chiefs-postseason-merch-following-teams-early-exit"
+    },
+    {
+      "claim": "BreakingT moment-to-market (players-association licensed)",
+      "value": "12-24 hours; mockups ~13 hours in Marlins example; DTG for single-unit reprints",
+      "source_url": "https://sports.yahoo.com/how-did-that-instantly-become-a-t-shirt-inside-baseball-merchandise-boom-223725892.html"
+    },
+    {
+      "claim": "Meta learning phase",
+      "value": "~50 optimization events per ad set in 7 days; budget edits >~20% can reset",
+      "source_url": "https://jetfuel.agency/what-is-the-meta-ads-learning-phase-how-to-exit-it-faster-in-2026/"
+    },
+    {
+      "claim": "Meta ad review",
+      "value": "typically within 24 hours",
+      "source_url": "https://conductatlas.com/platform/meta-ads/meta-advertising-policies/provision/CA-P-053169/ad-review-typically-completed-within-24-hours/"
+    },
+    {
+      "claim": "Klaviyo SMS throughput",
+      "value": "toll-free/10DLC 10 msg/s (100k in ~2.8h); short code 100 msg/s (~17 min); toll-free verification 7-10 bd; short code 8-12 weeks",
+      "source_url": "https://academy.klaviyo.com/en-us/learning-paths/add-text-messaging-as-a-service-for-your-agency/courses/understand-klaviyo-sms/lessons/choose-the-right-sending-number"
+    },
+    {
+      "claim": "US Foods Pronto",
+      "value": "8pm cutoff next-day delivery; 6 days/week; 76 metro areas; no minimum",
+      "source_url": "https://usfoods.com/why-us-foods/our-programs/next-day-restaurant-delivery.html"
+    },
+    {
+      "claim": "NYC Fair Workweek (fast food) premiums",
+      "value": "14 days' notice; $10-$75 per schedule change depending on notice and direction",
+      "source_url": "https://www.nyc.gov/assets/dca/downloads/pdf/workers/FAQs-FairWorkweek-FastFood.pdf"
+    },
+    {
+      "claim": "Chicago Fair Workweek",
+      "value": "restaurants with 30+ locations & 250+ employees; hotels and others with 100+ employees; 14 days' notice; 1 hour predictability pay",
+      "source_url": "https://www.seyfarth.com/news-insights/chicago-passes-expansive-fair-workweek-law-1.html"
+    },
+    {
+      "claim": "Seattle Secure Scheduling",
+      "value": "retail/food service 500+ employees; full-service restaurants only if 40+ locations; 14 days; +1 hour pay",
+      "source_url": "https://seattle.gov/documents/Departments/LaborStandards/21_0405_Fact%20Sheet_SSO.pdf"
+    },
+    {
+      "claim": "Montreal 2026 NHL playoffs restaurant spend near arena (Moneris)",
+      "value": "+15% to +38% R1 home games; +37% to +84% R2 home games; away Game 7 -19%",
+      "source_url": "https://dataservices.moneris.com/en/resources/blog/sports/moneris-data-for-montreal-canadiens-hockey-playoffs-2026"
+    },
+    {
+      "claim": "Indianapolis 2025 NBA Finals Game 4 hotel rate",
+      "value": "$179 ADR, only +2% vs 30 days prior; OKC hotel search +45% vs 22-month average",
+      "source_url": "https://www.hospitalitynet.org/news/4127789/nba-finals-2025-how-forward-looking-search-data-reveals-the-winning-playbook-for-hotels"
+    },
+    {
+      "claim": "PriceLabs sync frequency",
+      "value": "nightly default (1-3x/day); real-time up to 24 updates/day, min 60 min apart",
+      "source_url": "https://hello.pricelabs.co/blog/real-time-pricing-updates"
+    },
+    {
+      "claim": "Public DTC apparel inventory turns [secondary]",
+      "value": "median 2.61x/yr (~140 days); Lululemon 2.83, Columbia 2.43, Levi 2.10, FIGS 1.82; healthy private DTC 6.6-12.2",
+      "source_url": "https://eightx.co/blog/average-cpg-inventory-turnover-public-vs-private-ecommerce-2026"
+    },
+    {
+      "claim": "Retail inventory turnover benchmark (CSIMarket Q1 2023 via Shopify)",
+      "value": "10.86x overall retail; consumer discretionary ~7x",
+      "source_url": "https://www.shopify.com/retail/inventory-turnover-ratio"
+    },
+    {
+      "claim": "China->US freight transit [secondary]",
+      "value": "sea West Coast 18-30 d door-to-door, East Coast 30-45 d; standard air 6-10 d, express 3-6 d; air 6-22x sea cost per kg",
+      "source_url": "https://www.epicsourcing.co/post/how-long-does-shipping-from-china-take-air-vs-sea"
+    },
+    {
+      "claim": "Custom apparel end-to-end lead time [secondary]",
+      "value": "bulk production 30-60 days after sample approval; 10-16 weeks end-to-end",
+      "source_url": "https://seller.alibaba.com/blogs/2026/southeast-asia/apparel-accessories/30-days-lead-time-custom-apparel-guide-alibaba-b2b"
+    },
+    {
+      "claim": "Flexport inbound receiving",
+      "value": "direct inbound 1-3 calendar days; dock-to-stock crossdock ~20% in 3-4 d, ~80% in 4-11 d",
+      "source_url": "https://support.portal.flexport.com/hc/en-us/articles/17535744483607-Estimated-Receiving-Times"
+    },
+    {
+      "claim": "Shopify inventory tooling",
+      "value": "native purchase orders/transfers, no native demand forecasting; Stocky shut down Aug 31, 2026",
+      "source_url": "https://www.digit-software.com/blog/shopify-stocky-being-discontinued"
+    },
+    {
+      "claim": "Seasonal apparel liquidation recovery [secondary]",
+      "value": "~5-15% of retail once selling window closes",
+      "source_url": "https://closo.co/blogs/inventory-liquidation/liquidation-items-profit-margins"
+    },
+    {
+      "claim": "Wikipedia attention decay after title (own analysis): 2025 Thunder",
+      "value": "peak 106x March baseline on Jun 23 UTC; 85% of 60-day excess pageviews in first 3 days, 93% in 7 days",
+      "source_url": "https://wikimedia.org/api/rest_v1/"
+    },
+    {
+      "claim": "Wikipedia attention decay after title (own analysis): 2026 Knicks",
+      "value": "peak 220x March baseline on Jun 14 UTC; 67% of 60-day excess in first 3 days, 82% in 7 days, 93% in 21 days",
+      "source_url": "https://wikimedia.org/api/rest_v1/"
+    },
+    {
+      "claim": "Wikipedia attention ramp through playoffs (own analysis)",
+      "value": "Thunder 2025 weekly: ~2-3x (R2), ~7x (WCF), 22x (Finals week), back to ~1x by mid-July; Knicks 2026: ~4x (R2), ~7x, 20-36x (ECF/Finals), 53x (title week), 6x week after",
+      "source_url": "https://wikimedia.org/api/rest_v1/"
+    },
+    {
+      "claim": "Milwaukee 2021 NBA Finals downtown hotel pricing [local press]",
+      "value": "remaining rooms $400+/night around Game 6; prices near arena roughly doubled after Finals berth",
+      "source_url": "https://biztimes.com/prices-skyrocket-for-downtown-hotels-tickets-for-game-6-of-nba-finals/?amp=1"
+    }
+  ]
+}
